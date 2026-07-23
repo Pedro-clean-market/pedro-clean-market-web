@@ -8,12 +8,7 @@
 
 <title>Pérez Limpieza | Limpieza de Calidad</title>
 
-
 <style>
-
-/* =====================
-   CONFIGURACIÓN GENERAL
-===================== */
 
 *{
 margin:0;
@@ -22,6 +17,7 @@ box-sizing:border-box;
 font-family:Arial, sans-serif;
 }
 
+
 html{
 scroll-behavior:smooth;
 }
@@ -29,8 +25,7 @@ scroll-behavior:smooth;
 
 body{
 
-background:
-linear-gradient(
+background:linear-gradient(
 180deg,
 #ffffff,
 #eaffef
@@ -43,23 +38,17 @@ overflow-x:hidden;
 }
 
 
-
 :root{
 
 --verde:#1fa64a;
---verde2:#0e7a32;
+--verdeoscuro:#117a34;
 --rojo:#ff3030;
 
 }
 
 
 
-
-
-
-/* =====================
-       LOADER
-===================== */
+/* ===== CARGANDO ===== */
 
 
 #loader{
@@ -71,16 +60,15 @@ height:100%;
 
 background:white;
 
-z-index:9999;
-
 display:flex;
-
-justify-content:center;
 
 align-items:center;
 
-}
+justify-content:center;
 
+z-index:9999;
+
+}
 
 
 .loader-box{
@@ -90,40 +78,27 @@ text-align:center;
 }
 
 
-
 .esponja{
 
 font-size:100px;
 
-animation:
-
-lavar 2s infinite;
+animation:lavar 2s infinite;
 
 }
-
 
 
 @keyframes lavar{
 
-
 0%{
-
-transform:translateX(-50px) rotate(-20deg);
-
+transform:translateX(-60px) rotate(-20deg);
 }
-
 
 50%{
-
-transform:translateX(50px) rotate(20deg);
-
+transform:translateX(60px) rotate(20deg);
 }
 
-
 100%{
-
-transform:translateX(-50px) rotate(-20deg);
-
+transform:translateX(-60px) rotate(-20deg);
 }
 
 }
@@ -141,8 +116,7 @@ margin-top:20px;
 }
 
 
-
-.loader-box span::after{
+.loader-box span:after{
 
 content:"";
 
@@ -151,27 +125,24 @@ animation:puntos 1.5s infinite;
 }
 
 
-
 @keyframes puntos{
 
 0%{content:"";}
 
 33%{content:".";}
 
-66%{content:".."}
 
-100%{content:"..."}
+66%{content:"..";}
+
+
+100%{content:"...";}
 
 }
 
 
 
 
-
-
-/* =====================
-     SIN INTERNET
-===================== */
+/* ===== SIN INTERNET ===== */
 
 
 #offline{
@@ -187,9 +158,9 @@ background:white;
 
 z-index:9998;
 
-justify-content:center;
-
 align-items:center;
+
+justify-content:center;
 
 }
 
@@ -212,19 +183,14 @@ animation:barrer 2s infinite alternate;
 }
 
 
-
 @keyframes barrer{
 
 from{
-
 transform:translateX(-80px);
-
 }
 
 to{
-
 transform:translateX(80px);
-
 }
 
 }
@@ -242,11 +208,7 @@ font-size:35px;
 
 
 
-
-
-/* =====================
-      BURBUJAS
-===================== */
+/* ===== BURBUJAS ===== */
 
 
 .burbujas{
@@ -261,7 +223,6 @@ z-index:-1;
 }
 
 
-
 .burbujas span{
 
 position:absolute;
@@ -272,7 +233,7 @@ width:35px;
 
 height:35px;
 
-background:#1fa64a30;
+background:#1fa64a40;
 
 border-radius:50%;
 
@@ -291,11 +252,12 @@ left:10%;
 
 .burbujas span:nth-child(2){
 
-left:30%;
+left:35%;
 
 animation-duration:20s;
 
 }
+
 
 
 .burbujas span:nth-child(3){
@@ -303,6 +265,7 @@ animation-duration:20s;
 left:60%;
 
 width:50px;
+
 height:50px;
 
 animation-duration:25s;
@@ -310,11 +273,13 @@ animation-duration:25s;
 }
 
 
+
 .burbujas span:nth-child(4){
 
 left:80%;
 
 }
+
 
 
 .burbujas span:nth-child(5){
@@ -326,9 +291,7 @@ left:90%;
 
 
 
-
 @keyframes subir{
-
 
 to{
 
@@ -338,7 +301,6 @@ opacity:0;
 
 }
 
-
 }
 
 
@@ -346,9 +308,7 @@ opacity:0;
 
 
 
-/* =====================
-       HEADER
-===================== */
+/* ===== HEADER ===== */
 
 
 header{
@@ -361,9 +321,9 @@ width:100%;
 
 padding:20px 8%;
 
-background:#ffffffcc;
+background:#ffffffdd;
 
-backdrop-filter:blur(15px);
+backdrop-filter:blur(10px);
 
 z-index:1000;
 
@@ -387,7 +347,7 @@ align-items:center;
 
 .logo{
 
-font-size:28px;
+font-size:30px;
 
 font-weight:bold;
 
@@ -408,7 +368,6 @@ list-style:none;
 }
 
 
-
 nav a{
 
 text-decoration:none;
@@ -417,10 +376,7 @@ color:#333;
 
 font-weight:bold;
 
-transition:.3s;
-
 }
-
 
 
 nav a:hover{
@@ -430,18 +386,15 @@ color:var(--verde);
 }
 
 
-<style>
 
-/* =====================
-        INICIO
-===================== */
+/* ===== INICIO ===== */
 
 
 .inicio{
 
 min-height:100vh;
 
-padding:150px 8% 80px;
+padding:150px 8% 50px;
 
 display:flex;
 
@@ -449,30 +402,18 @@ align-items:center;
 
 justify-content:space-between;
 
-gap:50px;
-
 }
-
-
-
-.inicio-texto{
-
-max-width:700px;
-
-}
-
 
 
 .inicio h1{
 
-font-size:60px;
+font-size:55px;
 
 color:var(--verde);
 
-line-height:1.2;
+max-width:700px;
 
 }
-
 
 
 .inicio p{
@@ -486,49 +427,13 @@ margin-top:25px;
 }
 
 
+.iconos{
 
-.boton{
-
-display:inline-block;
-
-margin-top:35px;
-
-padding:18px 40px;
-
-border-radius:50px;
-
-background:var(--verde);
-
-color:white;
-
-text-decoration:none;
-
-font-size:20px;
-
-font-weight:bold;
-
-transition:.3s;
-
-}
-
-
-
-.boton:hover{
-
-transform:scale(1.08);
-
-}
-
-
-
-.inicio-icono{
-
-font-size:150px;
+font-size:130px;
 
 animation:flotar 3s infinite;
 
 }
-
 
 
 @keyframes flotar{
@@ -542,29 +447,45 @@ transform:translateY(-20px);
 }
 
 
+.boton{
+
+display:inline-block;
+
+margin-top:30px;
+
+background:var(--verde);
+
+color:white;
+
+padding:18px 40px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+}
 
 
 
+.boton:hover{
+
+transform:scale(1.1);
+
+}
+
+/* ===== PORQUE ELEGIRNOS ===== */
 
 
-/* =====================
-     PORQUE ELEGIRNOS
-===================== */
-
-
-.porque,
-.productos,
-.opiniones,
-.preguntas,
-.calidad{
+.seccion{
 
 padding:100px 8%;
 
 }
 
 
-
-h2{
+.titulo{
 
 text-align:center;
 
@@ -605,8 +526,6 @@ box-shadow:0 15px 35px #0002;
 
 transition:.4s;
 
-font-size:50px;
-
 }
 
 
@@ -619,13 +538,21 @@ transform:translateY(-15px);
 
 
 
-.beneficio h3{
+.beneficio .icono{
 
-font-size:25px;
+font-size:60px;
+
+}
+
+
+
+.beneficio h3{
 
 color:var(--verde);
 
-margin-top:15px;
+font-size:25px;
+
+margin:20px 0;
 
 }
 
@@ -633,11 +560,7 @@ margin-top:15px;
 
 .beneficio p{
 
-font-size:16px;
-
 color:#666;
-
-margin-top:10px;
 
 }
 
@@ -645,16 +568,14 @@ margin-top:10px;
 
 
 
-
-
-/* =====================
-       PRODUCTOS
-===================== */
+/* ===== PRODUCTOS ===== */
 
 
 .productos{
 
-background:#f2fff6;
+padding:100px 8%;
+
+background:#f3fff7;
 
 }
 
@@ -680,7 +601,7 @@ margin-bottom:50px;
 
 border:none;
 
-padding:15px 25px;
+padding:15px 30px;
 
 border-radius:50px;
 
@@ -688,13 +609,13 @@ background:white;
 
 cursor:pointer;
 
+font-size:17px;
+
 font-weight:bold;
 
-font-size:16px;
+box-shadow:0 10px 25px #0002;
 
 transition:.3s;
-
-box-shadow:0 10px 20px #0002;
 
 }
 
@@ -711,16 +632,17 @@ color:white;
 
 
 
-.productos-grid{
+.lista-productos{
 
 display:grid;
 
 grid-template-columns:
-repeat(auto-fit,minmax(270px,1fr));
+repeat(auto-fit,minmax(260px,1fr));
 
 gap:35px;
 
 }
+
 
 
 
@@ -730,13 +652,13 @@ background:white;
 
 border-radius:25px;
 
-padding-bottom:25px;
-
 overflow:hidden;
 
 box-shadow:0 15px 35px #0002;
 
 transition:.4s;
+
+padding-bottom:25px;
 
 }
 
@@ -744,7 +666,7 @@ transition:.4s;
 
 .producto:hover{
 
-transform:translateY(-10px);
+transform:translateY(-12px);
 
 }
 
@@ -754,7 +676,7 @@ transform:translateY(-10px);
 
 width:100%;
 
-height:260px;
+height:250px;
 
 object-fit:contain;
 
@@ -768,9 +690,9 @@ background:#eaffef;
 
 text-align:center;
 
-font-size:24px;
-
 color:var(--verde);
+
+font-size:24px;
 
 padding:20px;
 
@@ -790,7 +712,7 @@ padding:0 20px 20px;
 
 
 
-.whatsapp{
+.consultar{
 
 display:block;
 
@@ -802,38 +724,44 @@ background:var(--rojo);
 
 color:white;
 
+text-decoration:none;
+
+text-align:center;
+
 padding:15px;
 
 border-radius:50px;
 
-text-align:center;
-
-text-decoration:none;
-
 font-weight:bold;
 
-}
-
-
-
-.whatsapp:hover{
-
-background:#c90000;
+transition:.3s;
 
 }
 
 
 
+.consultar:hover{
+
+transform:scale(1.05);
+
+}
 
 
 
 
-/* =====================
-       OPINIONES
-===================== */
+
+/* ===== OPINIONES ===== */
 
 
-.opiniones-grid{
+.opiniones{
+
+padding:100px 8%;
+
+}
+
+
+
+.tarjetas-opinion{
 
 display:grid;
 
@@ -850,13 +778,13 @@ gap:30px;
 
 background:white;
 
-padding:35px;
+padding:30px;
 
 border-radius:25px;
 
-box-shadow:0 15px 35px #0002;
-
 text-align:center;
+
+box-shadow:0 15px 30px #0002;
 
 }
 
@@ -864,9 +792,9 @@ text-align:center;
 
 .estrellas{
 
-color:#ffc400;
-
 font-size:30px;
+
+color:#ffc400;
 
 }
 
@@ -874,21 +802,24 @@ font-size:30px;
 
 .opinion p{
 
-margin:20px 0;
-
 color:#666;
+
+margin:20px;
 
 }
 
 
 
 
+/* ===== ENVIO ===== */
 
 
+.envios{
 
-/* =====================
-        ENVIO
-===================== */
+padding:80px 8%;
+
+}
+
 
 
 .envio-box{
@@ -897,9 +828,9 @@ background:var(--verde);
 
 color:white;
 
-padding:50px;
-
 border-radius:30px;
+
+padding:50px;
 
 text-align:center;
 
@@ -914,7 +845,6 @@ font-size:70px;
 animation:mover 2s infinite alternate;
 
 }
-
 
 
 @keyframes mover{
@@ -932,475 +862,437 @@ transform:translateX(20px);
 }
 
 }
+<!-- ===== CONTENIDO ===== -->
 
-</style><style>
 
-/* =====================
-      PREGUNTAS
-===================== */
+<section class="seccion">
 
-
-.pregunta{
-
-max-width:900px;
-
-margin:20px auto;
-
-background:white;
-
-border-radius:20px;
-
-overflow:hidden;
-
-box-shadow:0 10px 25px #0002;
-
-}
-
-
-
-.pregunta button{
-
-width:100%;
-
-padding:25px;
-
-border:none;
-
-background:white;
-
-font-size:20px;
-
-font-weight:bold;
-
-text-align:left;
-
-cursor:pointer;
-
-color:var(--verde);
-
-}
-
-
-
-.pregunta p{
-
-padding:0 25px 25px;
-
-color:#666;
-
-}
-
-
-
-
-
-/* =====================
-    LIMPIEZA CALIDAD
-===================== */
-
-
-.calidad{
-
-text-align:center;
-
-background:white;
-
-}
-
-
-
-.calidad-icono{
-
-font-size:90px;
-
-animation:flotar 3s infinite;
-
-}
-
-
-
-.calidad h2{
-
-font-size:55px;
-
-}
-
-
-
-.calidad p{
-
-max-width:850px;
-
-margin:auto;
-
-font-size:20px;
-
-color:#666;
-
-line-height:1.7;
-
-}
-
-
-
-.detalles-calidad{
-
-display:flex;
-
-justify-content:center;
-
-gap:25px;
-
-flex-wrap:wrap;
-
-margin-top:50px;
-
-}
-
-
-
-.detalles-calidad div{
-
-background:#eaffef;
-
-padding:30px;
-
-border-radius:25px;
-
-font-size:22px;
-
-color:var(--verde);
-
-font-weight:bold;
-
-}
-
-
-
-
-
-
-/* =====================
-        FOOTER
-===================== */
-
-
-footer{
-
-background:var(--verde2);
-
-color:white;
-
-padding:60px 20px;
-
-text-align:center;
-
-}
-
-
-
-.footer-logo{
-
-font-size:35px;
-
-font-weight:bold;
-
-margin-bottom:20px;
-
-}
-
-
-
-.boton-footer{
-
-display:inline-block;
-
-background:var(--rojo);
-
-color:white;
-
-text-decoration:none;
-
-padding:18px 35px;
-
-border-radius:50px;
-
-margin:25px;
-
-font-weight:bold;
-
-}
-
-
-
-
-/* =====================
- WHATSAPP FLOTANTE
-===================== */
-
-
-.whatsapp-flotante{
-
-position:fixed;
-
-right:25px;
-
-bottom:25px;
-
-width:65px;
-
-height:65px;
-
-border-radius:50%;
-
-background:#25D366;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-color:white;
-
-font-size:35px;
-
-text-decoration:none;
-
-z-index:999;
-
-animation:pulso 2s infinite;
-
-}
-
-
-
-@keyframes pulso{
-
-50%{
-
-transform:scale(1.15);
-
-}
-
-}
-
-
-
-
-
-/* CELULAR */
-
-
-@media(max-width:800px){
-
-
-nav{
-
-flex-direction:column;
-
-gap:15px;
-
-}
-
-
-nav ul{
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-}
-
-
-
-.inicio{
-
-flex-direction:column;
-
-text-align:center;
-
-}
-
-
-
-.inicio h1{
-
-font-size:38px;
-
-}
-
-
-
-.inicio-icono{
-
-font-size:90px;
-
-}
-
-
-h2{
-
-font-size:35px;
-
-}
-
-
-}
-
-</style>
-
-
-
-
-
-<!-- =====================
-      CONTENIDO HTML
-===================== -->
-
-
-<section class="preguntas">
-
-
-<h2>
-❓ Preguntas frecuentes
+<h2 class="titulo">
+✨ ¿Por qué elegir Pérez Limpieza?
 </h2>
 
 
-<div class="pregunta">
+<div class="beneficios">
 
-<button>
-🧴 ¿Qué productos venden?
-</button>
 
-<p>
-Vendemos productos para pisos, ropa, cocina, manos y bolsas.
-</p>
+<div class="beneficio">
 
+<div class="icono">
+🧽
 </div>
-
-
-
-<div class="pregunta">
-
-<button>
-🫧 ¿Son productos concentrados?
-</button>
-
-<p>
-Sí, tienen gran rendimiento y calidad.
-</p>
-
-</div>
-
-
-
-<div class="pregunta">
-
-<button>
-📱 ¿Cómo compro?
-</button>
-
-<p>
-Podés consultar por WhatsApp directamente.
-</p>
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<section class="calidad">
-
-
-<div class="calidad-icono">
-
-🧽🫧
-
-</div>
-
-
-<h2>
-Limpieza de Calidad
-</h2>
-
-
-<p>
-En Pérez Limpieza ofrecemos productos confiables para que cada espacio quede limpio, fresco y cuidado.
-</p>
-
-
-<div class="detalles-calidad">
-
-<div>
-✨
-<br>
-Calidad
-</div>
-
-
-<div>
-🧴
-<br>
-Rendimiento
-</div>
-
-
-<div>
-🌿
-<br>
-Frescura
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<footer id="contacto">
-
-
-<div class="footer-logo">
-
-🫧 Pérez Limpieza
-
-</div>
-
 
 <h3>
-Productos de limpieza profesionales
+Calidad
 </h3>
 
+<p>
+Productos seleccionados para una limpieza efectiva.
+</p>
+
+</div>
 
 
-<a class="boton-footer"
+
+<div class="beneficio">
+
+<div class="icono">
+🧴
+</div>
+
+<h3>
+Rendimiento
+</h3>
+
+<p>
+Productos concentrados que duran más.
+</p>
+
+</div>
+
+
+
+<div class="beneficio">
+
+<div class="icono">
+🚚
+</div>
+
+<h3>
+Rapidez
+</h3>
+
+<p>
+Atención rápida y personalizada.
+</p>
+
+</div>
+
+
+
+<div class="beneficio">
+
+<div class="icono">
+⭐
+</div>
+
+<h3>
+Confianza
+</h3>
+
+<p>
+Clientes satisfechos con nuestros productos.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+<section class="productos" id="productos">
+
+
+<h2 class="titulo">
+🧺 Nuestros Productos
+</h2>
+
+
+<div class="categorias">
+
+
+<button class="categoria activo">
+🧴 Todos
+</button>
+
+<button class="categoria">
+🪣 Pisos
+</button>
+
+<button class="categoria">
+👕 Ropa
+</button>
+
+<button class="categoria">
+🍽 Cocina
+</button>
+
+<button class="categoria">
+🧼 Manos
+</button>
+
+<button class="categoria">
+🗑 Bolsas
+</button>
+
+
+</div>
+
+
+
+
+<div class="lista-productos">
+
+
+
+<div class="producto">
+
+<img src="imagenes/detergente.png">
+
+<h3>
+Detergente 12% Amarillo
+</h3>
+
+<p>
+Limpieza profunda para cocina.
+</p>
+
+<a class="consultar"
+href="https://wa.me/5491171005652"
+target="_blank">
+💬 Consultar
+</a>
+
+</div>
+
+
+
+
+
+<div class="producto">
+
+<img src="imagenes/jabon-ropa.png">
+
+<h3>
+Jabón líquido para ropa 15%
+</h3>
+
+<p>
+Baja espuma y gran rendimiento.
+</p>
+
+<a class="consultar"
+href="https://wa.me/5491171005652"
+target="_blank">
+💬 Consultar
+</a>
+
+</div>
+
+
+
+
+
+<div class="producto">
+
+<img src="imagenes/suavizante.png">
+
+<h3>
+Suavizante Triple Perfume
+</h3>
+
+<p>
+Aroma fresco y duradero.
+</p>
+
+<a class="consultar"
+href="https://wa.me/5491171005652"
+target="_blank">
+💬 Consultar
+</a>
+
+</div>
+
+
+
+
+
+<div class="producto">
+
+<img src="imagenes/desengrasante.png">
+
+<h3>
+Desengrasante Multiuso
+</h3>
+
+<p>
+Para suciedad difícil.
+</p>
+
+<a class="consultar"
+href="https://wa.me/5491171005652"
+target="_blank">
+💬 Consultar
+</a>
+
+</div>
+
+
+
+
+
+<div class="producto">
+
+<img src="imagenes/jabon-manos.png">
+
+<h3>
+Jabón líquido para manos
+</h3>
+
+<p>
+Limpieza y cuidado diario.
+</p>
+
+<a class="consultar"
+href="https://wa.me/5491171005652"
+target="_blank">
+💬 Consultar
+</a>
+
+</div>
+
+
+
+
+
+<div class="producto">
+
+<img src="imagenes/bolsas.png">
+
+<h3>
+Bolsas de residuos
+</h3>
+
+<p>
+Resistentes y prácticas.
+</p>
+
+<a class="consultar"
+href="https://wa.me/5491171005652"
+target="_blank">
+💬 Consultar
+</a>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="opiniones">
+
+
+<h2 class="titulo">
+⭐ Opiniones de clientes
+</h2>
+
+
+<div class="tarjetas-opinion">
+
+
+<div class="opinion">
+
+<div class="estrellas">
+★★★★★
+</div>
+
+<p>
+"Excelentes productos y muy buena atención."
+</p>
+
+</div>
+
+
+<div class="opinion">
+
+<div class="estrellas">
+★★★★★
+</div>
+
+<p>
+"Muy buen aroma y duran mucho."
+</p>
+
+</div>
+
+
+<div class="opinion">
+
+<div class="estrellas">
+★★★★★
+</div>
+
+<p>
+"Siempre compro porque tienen buena calidad."
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+<section class="envios">
+
+
+<div class="envio-box">
+
+
+<div class="camion">
+🚚
+</div>
+
+
+<h2>
+Envíos y atención rápida
+</h2>
+
+
+<p>
+Consultá por WhatsApp y realizá tu pedido fácilmente.
+</p>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+<section class="seccion">
+
+
+<h2 class="titulo">
+🧽 Limpieza de Calidad
+</h2>
+
+
+<p style="text-align:center;font-size:22px;color:#666">
+
+En Pérez Limpieza trabajamos para ofrecer productos confiables, eficientes y con gran rendimiento.
+
+</p>
+
+
+</section>
+
+
+
+
+
+
+
+<footer>
+
+
+<h2>
+🫧 Pérez Limpieza
+</h2>
+
+
+<p>
+Productos de limpieza de calidad profesional.
+</p>
+
+
+<a class="boton"
 href="https://wa.me/5491171005652"
 target="_blank">
 
-💬 Consultar por WhatsApp
+💬 Consultar WhatsApp
 
 </a>
 
 
+<br><br>
 
-<p>
-© 2026 Pérez Limpieza - Limpieza de calidad
-</p>
 
+© 2026 Pérez Limpieza
 
 </footer>
-
 
 
 
@@ -1418,12 +1310,10 @@ target="_blank">
 
 
 
-
-
 <script>
 
 
-// CARGA
+// Pantalla de carga
 
 window.addEventListener("load",()=>{
 
@@ -1433,120 +1323,34 @@ document.getElementById("loader").style.display="none";
 
 },2000);
 
-
 });
 
 
 
 
-// SIN INTERNET
+// Sin internet
+
+let offline =
+document.getElementById("offline");
 
 
-function revisarInternet(){
+window.addEventListener("offline",()=>{
 
-if(!navigator.onLine){
-
-document.getElementById("offline").style.display="flex";
-
-}else{
-
-document.getElementById("offline").style.display="none";
-
-}
-
-}
-
-
-window.addEventListener("offline",revisarInternet);
-
-window.addEventListener("online",revisarInternet);
-
-
-
-
-
-
-
-// FILTRO PRODUCTOS
-
-
-let botones=document.querySelectorAll(".categoria");
-
-let productos=document.querySelectorAll(".producto");
-
-
-botones.forEach(btn=>{
-
-
-btn.onclick=()=>{
-
-
-botones.forEach(b=>b.classList.remove("activo"));
-
-btn.classList.add("activo");
-
-
-let cat=btn.dataset.cat;
-
-
-productos.forEach(p=>{
-
-
-if(cat=="todos" || p.dataset.tipo==cat){
-
-p.style.display="block";
-
-}else{
-
-p.style.display="none";
-
-}
-
+offline.style.display="flex";
 
 });
 
 
-}
+window.addEventListener("online",()=>{
 
-
-});
-
-
-
-
-
-
-// WHATSAPP PRODUCTO
-
-
-document.querySelectorAll(".whatsapp").forEach(btn=>{
-
-
-btn.onclick=()=>{
-
-
-let producto=
-btn.parentElement.querySelector("h3").innerText;
-
-
-let mensaje=
-"Hola, me interesa el producto: "+producto;
-
-
-window.open(
-"https://wa.me/5491171005652?text="+
-encodeURIComponent(mensaje)
-);
-
-
-}
-
+offline.style.display="none";
 
 });
 
 
 
 </script>
+
 
 
 </body>
