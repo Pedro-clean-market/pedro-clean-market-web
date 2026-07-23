@@ -1,245 +1,3756 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pérez Limpieza</title>
 
-<style>
+<title>Pérez Limpieza | Limpieza de Calidad</title>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
-}
+<link rel="stylesheet" href="style.css">
 
-body{
-background:linear-gradient(to bottom,#ffffff,#e8ffe8);
-}
-
-header{
-background:#2e8b57;
-color:white;
-padding:30px;
-text-align:center;
-font-size:35px;
-font-weight:bold;
-}
-
-.subtitulo{
-text-align:center;
-font-size:22px;
-margin:20px;
-color:#444;
-}
-
-.container{
-width:90%;
-max-width:1200px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-padding-bottom:50px;
-}
-
-.card{
-background:white;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,.15);
-overflow:hidden;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.imagen{
-height:260px;
-background:#dfffdc;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:22px;
-color:#666;
-}
-
-.nombre{
-font-size:30px;
-font-weight:bold;
-text-align:center;
-padding:20px;
-color:#1c7a35;
-}
-
-.boton{
-display:block;
-width:85%;
-margin:20px auto 30px;
-background:red;
-color:white;
-text-decoration:none;
-padding:16px;
-font-size:20px;
-font-weight:bold;
-text-align:center;
-border-radius:10px;
-transition:.3s;
-}
-
-.boton:hover{
-background:#b80000;
-}
-
-footer{
-background:#2e8b57;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:30px;
-}
-
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 </head>
 
+
 <body>
+
+
+<!-- ================= LOADER ================= -->
+
+<div id="loader">
+
+    <div class="loader-content">
+
+        <div class="esponja">
+            🧽
+        </div>
+
+        <h2>
+            Cargando<span></span>
+        </h2>
+
+    </div>
+
+</div>
+
+
+<!-- ================= SIN INTERNET ================= -->
+
+<div id="offline">
+
+    <div class="offline-content">
+
+        <div class="escoba">
+            🧹
+        </div>
+
+        <h2>
+            Buscando la señal...
+        </h2>
+
+        <p>
+            Parece que no hay conexión a internet
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= BURBUJAS ================= -->
+
+<div class="burbujas">
+
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+
+
+<!-- ================= HEADER ================= -->
+
 
 <header>
 
-PÉREZ LIMPIEZA
+<nav>
+
+
+<div class="logo">
+
+🫧 Pérez Limpieza
+
+</div>
+
+
+<ul>
+
+<li>
+<a href="#inicio">
+Inicio
+</a>
+</li>
+
+
+<li>
+<a href="#nosotros">
+¿Por qué elegirnos?
+</a>
+</li>
+
+
+<li>
+<a href="#productos">
+Productos
+</a>
+</li>
+
+
+<li>
+<a href="#contacto">
+Contacto
+</a>
+</li>
+
+
+</ul>
+
+
+</nav>
 
 </header>
 
-<div class="subtitulo">
 
-Productos de limpieza de excelente calidad
+
+
+<!-- ================= INICIO ================= -->
+
+
+<section class="inicio" id="inicio">
+
+
+<div class="inicio-texto">
+
+
+<h1>
+
+🧼 Productos de limpieza de calidad profesional
+
+</h1>
+
+
+<p>
+
+Soluciones para hogares, comercios y empresas.
+
+</p>
+
+
+<a href="#productos" class="boton-principal">
+
+Ver productos
+
+</a>
+
 
 </div>
 
-<div class="container">
 
-<div class="card">
 
-<div class="imagen">
-📷 Foto del producto
+<div class="inicio-imagen">
+
+🧴🫧
+
 </div>
 
-<div class="nombre">
+
+
+</section>
+
+
+
+
+
+<!-- ================= PORQUE ELEGIRNOS ================= -->
+
+
+<section id="nosotros" class="porque">
+
+
+<h2>
+
+✨ ¿Por qué elegir Pérez Limpieza?
+
+</h2>
+
+
+
+<div class="beneficios">
+
+
+<div class="beneficio">
+
+🧽
+
+<h3>
+Calidad
+</h3>
+
+<p>
+Productos seleccionados para una limpieza efectiva.
+</p>
+
+</div>
+
+
+
+<div class="beneficio">
+
+🧴
+
+<h3>
+Rendimiento
+</h3>
+
+<p>
+Productos concentrados que duran más.
+</p>
+
+</div>
+
+
+
+<div class="beneficio">
+
+🚚
+
+<h3>
+Rapidez
+</h3>
+
+<p>
+Atención rápida y personalizada.
+</p>
+
+</div>
+
+
+
+<div class="beneficio">
+
+⭐
+
+<h3>
+Confianza
+</h3>
+
+<p>
+Clientes satisfechos con nuestros productos.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ================= PRODUCTOS ================= -->
+
+
+<section id="productos" class="productos">
+
+
+<h2>
+
+🧺 Nuestros Productos
+
+</h2>
+
+
+
+<div class="categorias">
+
+
+<button class="categoria activo" data-categoria="todos">
+
+🧴 Todos
+
+</button>
+
+
+<button class="categoria" data-categoria="pisos">
+
+🪣 Pisos
+
+</button>
+
+
+<button class="categoria" data-categoria="ropa">
+
+👕 Ropa
+
+</button>
+
+
+<button class="categoria" data-categoria="cocina">
+
+🍽 Cocina
+
+</button>
+
+
+<button class="categoria" data-categoria="manos">
+
+🧼 Manos
+
+</button>
+
+
+<button class="categoria" data-categoria="bolsas">
+
+🗑 Bolsas
+
+</button>
+
+
+
+</div>
+
+
+
+<div class="productos-container">
+
+
+
+<div class="producto" data-tipo="cocina">
+
+
+<img src="imagenes/detergente.png">
+
+
+<h3>
+
 Detergente 12% Amarillo
-</div>
 
-<a class="boton" href="https://wa.me/5491171005652" target="_blank">
-Consultar por WhatsApp
+</h3>
+
+
+<p>
+
+Limpieza profunda para cocina.
+
+</p>
+
+
+<a href="#" class="whatsapp">
+
+Consultar
+
 </a>
 
+
 </div>
 
-<div class="card">
 
-<div class="imagen">
-📷 Foto del producto
-</div>
 
-<div class="nombre">
-Jabón Líquido para Ropa 15% Azul Baja Espuma
-</div>
 
-<a class="boton" href="https://wa.me/5491171005652" target="_blank">
-Consultar por WhatsApp
+
+<div class="producto" data-tipo="ropa">
+
+
+<img src="imagenes/jabon-ropa.png">
+
+
+<h3>
+
+Jabón líquido para ropa
+
+</h3>
+
+
+<p>
+
+Baja espuma y gran rendimiento.
+
+</p>
+
+
+<a href="#" class="whatsapp">
+
+Consultar
+
 </a>
 
+
 </div>
 
-<div class="card">
 
-<div class="imagen">
-📷 Foto del producto
-</div>
 
-<div class="nombre">
-Suavizante para Ropa
-</div>
 
-<a class="boton" href="https://wa.me/5491171005652" target="_blank">
-Consultar por WhatsApp
+<div class="producto" data-tipo="ropa">
+
+
+<img src="imagenes/suavizante.png">
+
+
+<h3>
+
+Suavizante triple perfume
+
+</h3>
+
+
+<p>
+
+Deja una fragancia duradera.
+
+</p>
+
+
+<a href="#" class="whatsapp">
+
+Consultar
+
 </a>
 
+
 </div>
 
-<div class="card">
 
-<div class="imagen">
-📷 Foto del producto
+
+
 </div>
 
-<div class="nombre">
-Desodorantes Concentrados Línea Plus
+
+</section><!-- ================= OPINIONES ================= -->
+
+<section class="opiniones" id="opiniones">
+
+<h2>
+
+⭐ Opiniones de clientes
+
+</h2>
+
+
+<div class="opiniones-container">
+
+
+<div class="opinion">
+
+<div class="estrellas">
+★★★★★
 </div>
 
-<a class="boton" href="https://wa.me/5491171005652" target="_blank">
-Consultar por WhatsApp
+<p>
+
+"Excelentes productos, muy buena calidad y atención."
+
+</p>
+
+<h4>
+
+Cliente Pérez
+
+</h4>
+
+</div>
+
+
+
+<div class="opinion">
+
+<div class="estrellas">
+★★★★★
+</div>
+
+<p>
+
+"Los productos rinden muchísimo y tienen muy buen aroma."
+
+</p>
+
+<h4>
+
+Cliente Limpio
+
+</h4>
+
+</div>
+
+
+
+
+<div class="opinion">
+
+<div class="estrellas">
+★★★★★
+</div>
+
+<p>
+
+"Siempre compro porque tienen buenos precios."
+
+</p>
+
+<h4>
+
+Cliente Feliz
+
+</h4>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ================= ENVÍOS ================= -->
+
+
+<section class="envios">
+
+
+<div class="envio-box">
+
+
+<div class="icono-envio">
+
+🚚
+
+</div>
+
+
+<h2>
+
+Envíos y atención rápida
+
+</h2>
+
+
+<p>
+
+Consultanos por WhatsApp y coordinamos tu pedido de manera fácil y rápida.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ================= PREGUNTAS FRECUENTES ================= -->
+
+
+<section class="preguntas">
+
+
+<h2>
+
+❓ Preguntas frecuentes
+
+</h2>
+
+
+
+<div class="pregunta">
+
+
+<button>
+
+🧴 ¿Qué productos venden?
+
+</button>
+
+
+<p>
+
+Vendemos productos de limpieza para pisos, ropa, cocina, manos y más.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="pregunta">
+
+
+<button>
+
+🫧 ¿Los productos son concentrados?
+
+</button>
+
+
+<p>
+
+Sí, están preparados para tener un gran rendimiento.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="pregunta">
+
+
+<button>
+
+📱 ¿Cómo puedo comprar?
+
+</button>
+
+
+<p>
+
+Podés consultar directamente por WhatsApp.
+
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ================= CALIDAD ================= -->
+
+
+<section class="calidad">
+
+
+<div class="calidad-icono">
+
+🫧🧽
+
+</div>
+
+
+
+<h2>
+
+Limpieza de Calidad
+
+</h2>
+
+
+
+<p>
+
+En Pérez Limpieza trabajamos para ofrecer productos confiables, eficientes y de excelente rendimiento para que cada espacio quede impecable.
+
+</p>
+
+
+
+<div class="limpieza-detalles">
+
+
+<div>
+
+✨
+<br>
+
+Calidad
+
+</div>
+
+
+<div>
+
+🧴
+<br>
+
+Rendimiento
+
+</div>
+
+
+<div>
+
+🌿
+<br>
+
+Frescura
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+<!-- ================= CONTACTO ================= -->
+
+
+<footer id="contacto">
+
+
+<div class="footer-logo">
+
+🫧 Pérez Limpieza
+
+</div>
+
+
+
+<h3>
+
+¿Necesitás productos de limpieza?
+
+</h3>
+
+
+
+<a 
+href="https://wa.me/5491171005652"
+target="_blank"
+class="boton-footer">
+
+💬 Consultar por WhatsApp
+
 </a>
 
-</div>
 
-<div class="card">
 
-<div class="imagen">
-📷 Foto del producto
-</div>
+<p>
 
-<div class="nombre">
-Desengrasante Multiuso
-</div>
+© 2026 Pérez Limpieza - Limpieza de calidad
 
-<a class="boton" href="https://wa.me/5491171005652" target="_blank">
-Consultar por WhatsApp
-</a>
+</p>
 
-</div>
-
-<div class="card">
-
-<div class="imagen">
-📷 Foto del producto
-</div>
-
-<div class="nombre">
-Jabón Líquido para Manos
-</div>
-
-<a class="boton" href="https://wa.me/5491171005652" target="_blank">
-Consultar por WhatsApp
-</a>
-
-</div>
-
-<div class="card">
-
-<div class="imagen">
-📷 Foto del producto
-</div>
-
-<div class="nombre">
-Bolsas de Residuos
-</div>
-
-<a class="boton" href="https://wa.me/5491171005652" target="_blank">
-Consultar por WhatsApp
-</a>
-
-</div>
-
-</div>
-
-<footer>
-
-© 2026 Pérez Limpieza
 
 </footer>
 
+
+
+
+
+
+<!-- ================= BOTÓN WHATSAPP FLOTANTE ================= -->
+
+
+<a 
+href="https://wa.me/5491171005652"
+target="_blank"
+class="whatsapp-flotante">
+
+💬
+
+</a>
+
+
+
+
+
+<script src="script.js"></script>
+
+
 </body>
-</html>
+
+</html>*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+
+:root{
+
+    --verde:#1fa64a;
+    --verde-claro:#dff9e7;
+    --verde-fuerte:#117a34;
+    --blanco:#ffffff;
+    --gris:#666;
+    --rojo:#ff3030;
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+body{
+
+    background:linear-gradient(
+        180deg,
+        #ffffff,
+        #f1fff5
+    );
+
+    color:#222;
+    overflow-x:hidden;
+
+}
+
+
+
+
+/* =========================
+        BURBUJAS
+========================= */
+
+
+.burbujas{
+
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-1;
+    overflow:hidden;
+
+}
+
+
+
+.burbujas span{
+
+    position:absolute;
+    bottom:-100px;
+    width:35px;
+    height:35px;
+    background:rgba(31,166,74,.15);
+    border-radius:50%;
+    animation:subir 18s linear infinite;
+
+}
+
+
+
+.burbujas span:nth-child(1){
+
+    left:10%;
+    animation-duration:15s;
+
+}
+
+
+
+.burbujas span:nth-child(2){
+
+    left:30%;
+    width:20px;
+    height:20px;
+    animation-duration:20s;
+
+}
+
+
+
+.burbujas span:nth-child(3){
+
+    left:55%;
+    width:45px;
+    height:45px;
+    animation-duration:22s;
+
+}
+
+
+
+.burbujas span:nth-child(4){
+
+    left:75%;
+    animation-duration:17s;
+
+}
+
+
+
+.burbujas span:nth-child(5){
+
+    left:90%;
+    width:25px;
+    height:25px;
+    animation-duration:25s;
+
+}
+
+
+
+@keyframes subir{
+
+
+0%{
+
+    transform:translateY(0);
+    opacity:0;
+
+}
+
+
+20%{
+
+    opacity:1;
+
+}
+
+
+100%{
+
+    transform:translateY(-120vh);
+    opacity:0;
+
+}
+
+
+}
+
+
+
+
+
+/* =========================
+          LOADER
+========================= */
+
+
+
+#loader{
+
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+
+}
+
+
+
+.loader-content{
+
+    text-align:center;
+
+}
+
+
+
+.esponja{
+
+    font-size:100px;
+    animation:limpiar 2s infinite;
+
+}
+
+
+
+@keyframes limpiar{
+
+
+0%{
+
+    transform:translateX(-80px) rotate(-20deg);
+
+}
+
+
+50%{
+
+    transform:translateX(80px) rotate(20deg);
+
+}
+
+
+100%{
+
+    transform:translateX(-80px) rotate(-20deg);
+
+}
+
+
+}
+
+
+
+
+.loader-content h2{
+
+    margin-top:25px;
+    color:var(--verde);
+    font-size:35px;
+
+}
+
+
+
+
+.loader-content h2 span::after{
+
+    content:"";
+    animation:puntos 1.5s infinite;
+
+}
+
+
+
+@keyframes puntos{
+
+
+0%{
+
+content:"";
+
+}
+
+
+33%{
+
+content:".";
+
+}
+
+
+66%{
+
+content:"..";
+
+}
+
+
+100%{
+
+content:"...";
+
+}
+
+
+}
+
+
+
+
+
+/* =========================
+       SIN INTERNET
+========================= */
+
+
+
+#offline{
+
+    display:none;
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:white;
+    z-index:9998;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+
+.offline-content{
+
+    text-align:center;
+
+}
+
+
+
+.escoba{
+
+    font-size:100px;
+    animation:barrer 2s infinite alternate;
+
+}
+
+
+
+@keyframes barrer{
+
+
+from{
+
+    transform:translateX(-100px);
+
+}
+
+
+to{
+
+    transform:translateX(100px);
+
+}
+
+
+}
+
+
+
+
+.offline-content h2{
+
+    color:var(--verde);
+    font-size:38px;
+    margin-top:20px;
+
+}
+
+
+
+.offline-content p{
+
+    color:#777;
+    margin-top:10px;
+    font-size:18px;
+
+}/* =========================
+        HEADER
+========================= */
+
+
+header{
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 8%;
+    z-index:1000;
+
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(15px);
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+
+
+nav{
+
+    max-width:1300px;
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+}
+
+
+
+.logo{
+
+    font-size:30px;
+    font-weight:800;
+    color:var(--verde);
+
+    animation:flotar 3s infinite;
+
+}
+
+
+
+@keyframes flotar{
+
+
+0%,100%{
+
+    transform:translateY(0);
+
+}
+
+
+50%{
+
+    transform:translateY(-7px);
+
+}
+
+
+}
+
+
+
+nav ul{
+
+    display:flex;
+    gap:30px;
+    list-style:none;
+
+}
+
+
+
+nav ul li a{
+
+    text/* =========================
+          INICIO
+========================= */
+
+
+.inicio{
+
+    min-height:100vh;
+
+    padding:150px 8% 80px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:50px;
+
+}
+
+
+
+.inicio-texto{
+
+    max-width:700px;
+
+    animation:aparecerIzquierda 1s ease;
+
+}
+
+
+
+.inicio-texto h1{
+
+    font-size:60px;
+
+    line-height:1.2;
+
+    color:var(--verde);
+
+    font-weight:800;
+
+}
+
+
+
+.inicio-texto p{
+
+    margin-top:25px;
+
+    font-size:22px;
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+
+
+
+.boton-principal{
+
+    display:inline-block;
+
+    margin-top:40px;
+
+    padding:18px 45px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        90deg,
+        var(--verde),
+        #45d477
+    );
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    box-shadow:
+    0 15px 35px rgba(31,166,74,.35);
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.4s;
+
+}
+
+
+
+
+.boton-principal::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:80%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.4);
+
+    transform:skewX(-25deg);
+
+}
+
+
+
+.boton-principal:hover::before{
+
+    left:130%;
+
+    transition:.8s;
+
+}
+
+
+
+
+.boton-principal:hover{
+
+    transform:translateY(-8px) scale(1.05);
+
+}
+
+
+
+
+
+.inicio-imagen{
+
+    font-size:150px;
+
+    animation:flotarLimpieza 3s infinite;
+
+}
+
+
+
+@keyframes flotarLimpieza{
+
+
+0%,100%{
+
+    transform:translateY(0);
+
+}
+
+
+50%{
+
+    transform:translateY(-25px);
+
+}
+
+
+}
+
+
+
+
+
+/* =========================
+     ANIMACIONES ENTRADA
+========================= */
+
+
+
+@keyframes aparecerIzquierda{
+
+
+from{
+
+    opacity:0;
+
+    transform:translateX(-80px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+
+}
+
+
+
+
+
+
+/* =========================
+      TITULOS GENERALES
+========================= */
+
+
+.porque h2,
+.productos h2,
+.opiniones h2,
+.preguntas h2{
+
+
+    text-align:center;
+
+    font-size:48px;
+
+    color:var(--verde);
+
+    font-weight:800;
+
+    margin-bottom:60px;
+
+
+}
+/* =========================
+      POR QUÉ ELEGIRNOS
+========================= */
+
+
+.porque{
+
+    padding:110px 8%;
+
+}
+
+
+
+.beneficios{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:35px;
+
+}
+
+
+
+
+.beneficio{
+
+    background:
+    rgba(255,255,255,.75);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:30px;
+
+    padding:45px 30px;
+
+    text-align:center;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+
+.beneficio::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:200px;
+
+    height:200px;
+
+    background:
+    rgba(31,166,74,.15);
+
+    border-radius:50%;
+
+    top:-100px;
+
+    right:-100px;
+
+    transition:.5s;
+
+}
+
+
+
+.beneficio:hover::before{
+
+    transform:scale(3);
+
+}
+
+
+
+
+.beneficio:hover{
+
+    transform:
+    translateY(-15px);
+
+    box-shadow:
+    0 25px 50px rgba(0,0,0,.15);
+
+}
+
+
+
+
+.beneficio:first-letter{
+
+    font-size:60px;
+
+}
+
+
+
+
+.beneficio h3{
+
+    margin-top:25px;
+
+    color:var(--verde);
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+
+
+
+.beneficio p{
+
+    margin-top:15px;
+
+    color:#666;
+
+    font-size:17px;
+
+    line-height:1.7;
+
+}
+
+
+
+
+
+
+/* =========================
+      EFECTO APARECER
+========================= */
+
+
+.beneficio{
+
+    animation:
+    aparecerArriba .8s ease;
+
+}
+
+
+
+
+@keyframes aparecerArriba{
+
+
+from{
+
+    opacity:0;
+
+    transform:
+    translateY(50px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+
+}
+
+
+}/* =========================
+          PRODUCTOS
+========================= */
+
+
+.productos{
+
+    padding:110px 8%;
+
+    background:
+    linear-gradient(
+    180deg,
+    #ffffff,
+    #effff4
+    );
+
+}
+
+
+
+.categorias{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin-bottom:60px;
+
+}
+
+
+
+
+
+.categoria{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:15px 28px;
+
+    border-radius:50px;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    background:white;
+
+    color:#333;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+
+
+
+
+.categoria:hover,
+.categoria.activo{
+
+
+    background:var(--verde);
+
+    color:white;
+
+    transform:
+    translateY(-5px);
+
+    box-shadow:
+    0 15px 35px rgba(31,166,74,.35);
+
+
+}
+
+
+
+
+
+
+.productos-container{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+
+    gap:35px;
+
+
+}
+
+
+
+
+
+.producto{
+
+
+    background:white;
+
+
+    border-radius:30px;
+
+
+    padding-bottom:30px;
+
+
+    overflow:hidden;
+
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.10);
+
+
+    transition:.4s;
+
+
+    animation:
+    aparecerProducto .8s ease;
+
+
+}
+
+
+
+
+.producto:hover{
+
+
+    transform:
+    translateY(-12px);
+
+
+    box-shadow:
+
+    0 25px 55px rgba(0,0,0,.18);
+
+
+}
+
+
+
+
+
+.producto img{
+
+
+    width:100%;
+
+
+    height:280px;
+
+
+    object-fit:contain;
+
+
+    padding:20px;
+
+
+    background:
+    #f1fff5;
+
+
+    transition:.5s;
+
+
+}
+
+
+
+
+.producto:hover img{
+
+
+    transform:
+    scale(1.1);
+
+
+}
+
+
+
+
+.producto h3{
+
+
+    text-align:center;
+
+
+    font-size:25px;
+
+
+    color:var(--verde);
+
+
+    padding:20px 15px 10px;
+
+
+}
+
+
+
+
+
+.producto p{
+
+
+    text-align:center;
+
+
+    color:#666;
+
+
+    padding:0 25px 20px;
+
+
+    line-height:1.6;
+
+
+}
+
+
+
+
+
+
+/* =========================
+      BOTÓN WHATSAPP
+========================= */
+
+
+.whatsapp{
+
+
+    display:block;
+
+
+    width:85%;
+
+
+    margin:auto;
+
+
+    text-align:center;
+
+
+    padding:16px;
+
+
+    border-radius:50px;
+
+
+    background:
+
+    linear-gradient(
+    90deg,
+    #ff3030,
+    #d60000
+    );
+
+
+    color:white;
+
+
+    text-decoration:none;
+
+
+    font-size:18px;
+
+
+    font-weight:700;
+
+
+    transition:.35s;
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+.whatsapp::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    left:-120%;
+
+
+    top:0;
+
+
+    width:70%;
+
+
+    height:100%;
+
+
+    background:
+    rgba(255,255,255,.4);
+
+
+    transform:
+    skewX(-25deg);
+
+
+}
+
+
+
+
+
+.whatsapp:hover::before{
+
+
+    left:130%;
+
+
+    transition:.8s;
+
+
+}
+
+
+
+
+.whatsapp:hover{
+
+
+    transform:
+    scale(1.05);
+
+
+    box-shadow:
+
+    0 15px 30px rgba(255,0,0,.35);
+
+
+}
+
+
+
+
+
+
+@keyframes aparecerProducto{
+
+
+from{
+
+
+    opacity:0;
+
+
+    transform:
+    translateY(60px);
+
+
+}
+
+
+to{
+
+
+    opacity:1;
+
+
+    transform:
+    translateY(0);
+
+
+}
+
+
+}
+/* =========================
+        OPINIONES
+========================= */
+
+
+.opiniones{
+
+    padding:110px 8%;
+
+}
+
+
+
+.opiniones-container{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+
+    gap:35px;
+
+
+}
+
+
+
+
+
+.opinion{
+
+
+    background:white;
+
+
+    padding:35px;
+
+
+    border-radius:30px;
+
+
+    text-align:center;
+
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.08);
+
+
+    transition:.4s;
+
+
+}
+
+
+
+
+
+.opinion:hover{
+
+
+    transform:
+    translateY(-10px);
+
+
+}
+
+
+
+
+.estrellas{
+
+
+    color:#ffc107;
+
+
+    font-size:30px;
+
+
+    letter-spacing:5px;
+
+
+}
+
+
+
+
+
+.opinion p{
+
+
+    margin-top:20px;
+
+
+    color:#666;
+
+
+    line-height:1.7;
+
+
+    font-size:17px;
+
+
+}
+
+
+
+
+
+.opinion h4{
+
+
+    margin-top:20px;
+
+
+    color:var(--verde);
+
+
+}
+
+
+
+
+
+
+/* =========================
+          ENVIOS
+========================= */
+
+
+.envios{
+
+
+    padding:80px 8%;
+
+
+}
+
+
+
+
+
+.envio-box{
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    var(--verde),
+    #43d477
+    );
+
+
+    border-radius:35px;
+
+
+    color:white;
+
+
+    text-align:center;
+
+
+    padding:60px 30px;
+
+
+    box-shadow:
+
+    0 20px 50px rgba(31,166,74,.35);
+
+
+}
+
+
+
+
+
+.icono-envio{
+
+
+    font-size:70px;
+
+
+    animation:
+
+    moverCamion 2s infinite alternate;
+
+
+}
+
+
+
+
+
+@keyframes moverCamion{
+
+
+from{
+
+
+transform:translateX(-20px);
+
+
+}
+
+
+to{
+
+
+transform:translateX(20px);
+
+
+}
+
+
+}
+
+
+
+
+
+.envio-box h2{
+
+
+    font-size:40px;
+
+
+    margin:20px 0;
+
+
+}
+
+
+
+
+
+.envio-box p{
+
+
+    font-size:20px;
+
+
+}
+
+
+
+
+
+/* =========================
+       PREGUNTAS
+========================= */
+
+
+.preguntas{
+
+
+    padding:110px 8%;
+
+
+}
+
+
+
+.pregunta{
+
+
+    max-width:900px;
+
+
+    margin:20px auto;
+
+
+    background:white;
+
+
+    border-radius:20px;
+
+
+    overflow:hidden;
+
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.08);
+
+
+}
+
+
+
+
+
+.pregunta button{
+
+
+    width:100%;
+
+
+    padding:25px;
+
+
+    border:none;
+
+
+    background:white;
+
+
+    cursor:pointer;
+
+
+    text-align:left;
+
+
+    font-size:20px;
+
+
+    font-weight:700;
+
+
+    color:var(--verde);
+
+
+}
+
+
+
+
+
+.pregunta p{
+
+
+    padding:0 25px 25px;
+
+
+    color:#666;
+
+
+    line-height:1.6;
+
+
+}
+
+
+
+
+
+
+/* =========================
+      LIMPIEZA CALIDAD
+========================= */
+
+
+.calidad{
+
+
+    padding:120px 8%;
+
+
+    text-align:center;
+
+
+    background:
+
+    linear-gradient(
+    180deg,
+    #effff4,
+    white
+    );
+
+
+}
+
+
+
+
+
+.calidad-icono{
+
+
+    font-size:90px;
+
+
+    animation:
+
+    flotarLimpieza 3s infinite;
+
+
+}
+
+
+
+
+
+@keyframes flotarLimpieza{
+
+
+0%,100%{
+
+
+transform:translateY(0);
+
+
+}
+
+
+50%{
+
+
+transform:translateY(-20px);
+
+
+}
+
+
+}
+
+
+
+
+
+.calidad h2{
+
+
+    font-size:55px;
+
+
+    color:var(--verde);
+
+
+    margin:25px;
+
+
+}
+
+
+
+
+
+.calidad p{
+
+
+    max-width:850px;
+
+
+    margin:auto;
+
+
+    font-size:22px;
+
+
+    color:#666;
+
+
+    line-height:1.8;
+
+
+}
+
+
+
+
+
+.limpieza-detalles{
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    flex-wrap:wrap;
+
+
+    gap:30px;
+
+
+    margin-top:50px;
+
+
+}
+
+
+
+
+
+.limpieza-detalles div{
+
+
+    background:white;
+
+
+    padding:30px;
+
+
+    width:180px;
+
+
+    border-radius:25px;
+
+
+    font-size:20px;
+
+
+    color:var(--verde);
+
+
+    box-shadow:
+
+    0 15px 30px rgba(0,0,0,.08);
+
+
+}
+/* =========================
+          FOOTER
+========================= */
+
+
+footer{
+
+    background:
+    linear-gradient(
+    135deg,
+    #14833b,
+    #1fa64a
+    );
+
+    color:white;
+
+    text-align:center;
+
+    padding:70px 20px;
+
+}
+
+
+
+.footer-logo{
+
+    font-size:38px;
+
+    font-weight:800;
+
+    margin-bottom:25px;
+
+}
+
+
+
+footer h3{
+
+    font-size:25px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+
+
+.boton-footer{
+
+
+    display:inline-block;
+
+
+    padding:18px 40px;
+
+
+    border-radius:50px;
+
+
+    background:#ff3030;
+
+
+    color:white;
+
+
+    text-decoration:none;
+
+
+    font-size:20px;
+
+
+    font-weight:700;
+
+
+    transition:.35s;
+
+
+}
+
+
+
+
+
+.boton-footer:hover{
+
+
+    transform:
+
+    translateY(-8px);
+
+
+    box-shadow:
+
+    0 15px 35px rgba(255,0,0,.35);
+
+
+}
+
+
+
+
+
+footer p{
+
+
+    margin-top:40px;
+
+
+    opacity:.9;
+
+
+}
+
+
+
+
+
+
+/* =========================
+     WHATSAPP FLOTANTE
+========================= */
+
+
+.whatsapp-flotante{
+
+
+    position:fixed;
+
+
+    right:25px;
+
+
+    bottom:25px;
+
+
+    width:70px;
+
+
+    height:70px;
+
+
+    border-radius:50%;
+
+
+    background:#25D366;
+
+
+    color:white;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    text-decoration:none;
+
+
+    font-size:35px;
+
+
+    z-index:999;
+
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.25);
+
+
+    animation:
+
+    latido 2s infinite;
+
+
+}
+
+
+
+
+
+@keyframes latido{
+
+
+0%{
+
+transform:scale(1);
+
+}
+
+
+50%{
+
+transform:scale(1.12);
+
+}
+
+
+100%{
+
+transform:scale(1);
+
+}
+
+
+}
+
+
+
+
+
+
+/* =========================
+      ANIMACIONES SCROLL
+========================= */
+
+
+.aparecer{
+
+
+    opacity:0;
+
+
+    transform:
+
+    translateY(50px);
+
+
+    transition:1s;
+
+
+}
+
+
+
+.aparecer.visible{
+
+
+    opacity:1;
+
+
+    transform:
+
+    translateY(0);
+
+
+}
+
+
+
+
+
+
+/* =========================
+      RESPONSIVE TABLET
+========================= */
+
+
+@media(max-width:900px){
+
+
+    nav{
+
+
+        flex-direction:column;
+
+
+        gap:20px;
+
+
+    }
+
+
+
+    nav ul{
+
+
+        flex-wrap:wrap;
+
+
+        justify-content:center;
+
+
+    }
+
+
+
+    .inicio{
+
+
+        flex-direction:column;
+
+
+        text-align:center;
+
+
+    }
+
+
+
+    .inicio-texto h1{
+
+
+        font-size:42px;
+
+
+    }
+
+
+
+    .inicio-imagen{
+
+
+        font-size:100px;
+
+
+    }
+
+
+}
+
+
+
+
+
+
+/* =========================
+      RESPONSIVE CELULAR
+========================= */
+
+
+@media(max-width:600px){
+
+
+
+header{
+
+
+    padding:15px 5%;
+
+
+}
+
+
+
+
+.logo{
+
+
+    font-size:24px;
+
+
+}
+
+
+
+
+nav ul{
+
+
+    gap:15px;
+
+
+}
+
+
+
+nav ul li a{
+
+
+    font-size:14px;
+
+
+}
+
+
+
+.inicio{
+
+
+    padding:130px 5% 60px;
+
+
+}
+
+
+
+.inicio-texto h1{
+
+
+    font-size:32px;
+
+
+}
+
+
+
+.inicio-texto p{
+
+
+    font-size:17px;
+
+
+}
+
+
+
+.boton-principal{
+
+
+    padding:15px 30px;
+
+
+    font-size:17px;
+
+
+}
+
+
+
+
+.porque,
+.productos,
+.opiniones,
+.preguntas,
+.calidad{
+
+
+    padding:80px 5%;
+
+
+}
+
+
+
+
+.porque h2,
+.productos h2,
+.opiniones h2,
+.preguntas h2{
+
+
+    font-size:35px;
+
+
+}
+
+
+
+
+
+.calidad h2{
+
+
+    font-size:38px;
+
+
+}
+
+
+
+.calidad p{
+
+
+    font-size:18px;
+
+
+}
+
+
+
+.limpieza-detalles div{
+
+
+    width:140px;
+
+
+}
+
+
+
+
+.whatsapp-flotante{
+
+
+    width:60px;
+
+
+    height:60px;
+
+
+    font-size:28px;
+
+
+}
+
+
+}
+/* ==========================
+      PANTALLA DE CARGA
+========================== */
+
+
+window.addEventListener("load",()=>{
+
+
+    const loader = document.getElementById("loader");
+
+
+    setTimeout(()=>{
+
+
+        loader.style.opacity="0";
+
+
+        setTimeout(()=>{
+
+
+            loader.style.display="none";
+
+
+        },500);
+
+
+
+    },2000);
+
+
+
+});
+
+
+
+
+
+/* ==========================
+        SIN INTERNET
+========================== */
+
+
+const offline = document.getElementById("offline");
+
+
+
+function revisarConexion(){
+
+
+    if(!navigator.onLine){
+
+
+        offline.style.display="flex";
+
+
+    }else{
+
+
+        offline.style.display="none";
+
+
+    }
+
+
+}
+
+
+
+window.addEventListener(
+"offline",
+revisarConexion
+);
+
+
+
+window.addEventListener(
+"online",
+revisarConexion
+);
+
+
+
+revisarConexion();
+
+
+
+
+
+
+/* ==========================
+      HEADER AL HACER SCROLL
+========================== */
+
+
+const header = document.querySelector("header");
+
+
+
+window.addEventListener("scroll",()=>{
+
+
+    if(window.scrollY > 50){
+
+
+        header.classList.add("scrolled");
+
+
+    }else{
+
+
+        header.classList.remove("scrolled");
+
+
+    }
+
+
+});
+
+
+
+
+
+/* ==========================
+      ANIMACIÓN SCROLL
+========================== */
+
+
+const elementos = document.querySelectorAll(
+".beneficio,.producto,.opinion,.pregunta,.envio-box"
+);
+
+
+
+const mostrarElementos = ()=>{
+
+
+    elementos.forEach(elemento=>{
+
+
+        const posicion =
+        elemento.getBoundingClientRect().top;
+
+
+
+        if(posicion < window.innerHeight - 100){
+
+
+            elemento.classList.add("aparecer");
+
+
+        }
+
+
+
+    });
+
+
+
+};
+
+
+
+window.addEventListener(
+"scroll",
+mostrarElementos
+);
+
+
+
+mostrarElementos();
+
+/* ==========================
+     FILTRO DE PRODUCTOS
+========================== */
+
+
+const botonesCategoria = document.querySelectorAll(".categoria");
+
+const productos = document.querySelectorAll(".producto");
+
+
+
+botonesCategoria.forEach(boton=>{
+
+
+    boton.addEventListener("click",()=>{
+
+
+        // quitar activo
+
+
+        botonesCategoria.forEach(btn=>{
+
+            btn.classList.remove("activo");
+
+        });
+
+
+
+        boton.classList.add("activo");
+
+
+
+        const categoria =
+        boton.dataset.categoria;
+
+
+
+        productos.forEach(producto=>{
+
+
+            const tipo =
+            producto.dataset.tipo;
+
+
+
+            if(
+                categoria === "todos" ||
+                tipo === categoria
+            ){
+
+
+                producto.style.display="block";
+
+
+                setTimeout(()=>{
+
+                    producto.style.animation=
+                    "aparecerProducto .6s";
+
+                },50);
+
+
+
+            }else{
+
+
+                producto.style.display="none";
+
+
+            }
+
+
+
+        });
+
+
+
+    });
+
+
+
+});
+
+
+
+
+
+
+
+/* ==========================
+          BUSCADOR
+========================== */
+
+
+
+const buscador =
+document.getElementById("buscar");
+
+
+
+if(buscador){
+
+
+buscador.addEventListener(
+"keyup",
+()=>{
+
+
+    const texto =
+    buscador.value.toLowerCase();
+
+
+
+    productos.forEach(producto=>{
+
+
+        const nombre =
+        producto
+        .querySelector("h3")
+        .textContent
+        .toLowerCase();
+
+
+
+        if(nombre.includes(texto)){
+
+
+            producto.style.display="block";
+
+
+        }else{
+
+
+            producto.style.display="none";
+
+
+        }
+
+
+
+    });
+
+
+
+});
+
+
+}
+
+
+
+
+
+
+/* ==========================
+     WHATSAPP PRODUCTOS
+========================== */
+
+
+
+const botonesWhatsapp =
+document.querySelectorAll(".whatsapp");
+
+
+
+botonesWhatsapp.forEach(boton=>{
+
+
+    boton.addEventListener("click",(e)=>{
+
+
+        e.preventDefault();
+
+
+
+        const tarjeta =
+        boton.closest(".producto");
+
+
+
+        const nombre =
+        tarjeta.querySelector("h3").textContent;
+
+
+
+        const mensaje =
+        `Hola, me interesa el producto: ${nombre}`;
+
+
+
+        const numero =
+        "5491171005652";
+
+
+
+        const url =
+        `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+
+
+        window.open(
+            url,
+            "_blank"
+        );
+
+
+
+    });
+
+
+
+});
+
+
+
+
+
+
+/* ==========================
+      PREGUNTAS
+========================== */
+
+
+const preguntas =
+document.querySelectorAll(".pregunta");
+
+
+
+preguntas.forEach(pregunta=>{
+
+
+    const boton =
+    pregunta.querySelector("button");
+
+
+
+    const respuesta =
+    pregunta.querySelector("p");
+
+
+
+    respuesta.style.display="none";
+
+
+
+    boton.addEventListener("click",()=>{
+
+
+        if(respuesta.style.display==="none"){
+
+
+            respuesta.style.display="block";
+
+
+        }else{
+
+
+            respuesta.style.display="none";
+
+
+        }
+
+
+
+    });
+
+
+
+});
+
+/* ==========================
+      EFECTO SUAVE AL CARGAR
+========================== */
+
+
+document.body.style.opacity = "0";
+
+
+window.addEventListener("load",()=>{
+
+
+    setTimeout(()=>{
+
+
+        document.body.style.transition="1s";
+
+        document.body.style.opacity="1";
+
+
+    },200);
+
+
+
+});
+
+
+
+
+
+/* ==========================
+      EFECTO PRODUCTOS
+========================== */
+
+
+const tarjetas =
+document.querySelectorAll(".producto");
+
+
+
+tarjetas.forEach(tarjeta=>{
+
+
+    tarjeta.addEventListener(
+    "mouseenter",
+    ()=>{
+
+
+        tarjeta.style.zIndex="5";
+
+
+    });
+
+
+
+    tarjeta.addEventListener(
+    "mouseleave",
+    ()=>{
+
+
+        tarjeta.style.zIndex="1";
+
+
+    });
+
+
+
+});
+
+
+
+
+
+
+/* ==========================
+      MOVIMIENTO DEL MOUSE
+========================== */
+
+
+document.addEventListener(
+"mousemove",
+(e)=>{
+
+
+    const burbujas =
+    document.querySelector(".burbujas");
+
+
+    if(burbujas){
+
+
+        let x =
+        (e.clientX / window.innerWidth) * 10;
+
+
+        let y =
+        (e.clientY / window.innerHeight) * 10;
+
+
+
+        burbujas.style.transform =
+        `translate(${x}px,${y}px)`;
+
+
+    }
+
+
+});
+
+
+
+
+
+
+
+/* ==========================
+       BOTÓN VOLVER ARRIBA
+========================== */
+
+
+const botonArriba =
+document.createElement("button");
+
+
+
+botonArriba.innerHTML="⬆️";
+
+
+botonArriba.className=
+"subir-arriba";
+
+
+
+document.body.appendChild(
+botonArriba
+);
+
+
+
+botonArriba.style.display="none";
+
+
+
+window.addEventListener(
+"scroll",
+()=>{
+
+
+    if(window.scrollY > 600){
+
+
+        botonArriba.style.display="flex";
+
+
+    }else{
+
+
+        botonArriba.style.display="none";
+
+
+    }
+
+
+});
+
+
+
+botonArriba.addEventListener(
+"click",
+()=>{
+
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+
+});
+
+
+
+
+
+
+
+
+/* ==========================
+       ANIMACIÓN DE ICONOS
+========================== */
+
+
+const iconos =
+document.querySelectorAll(
+".beneficio,.calidad-icono"
+);
+
+
+
+iconos.forEach(icono=>{
+
+
+    icono.addEventListener(
+    "mouseenter",
+    ()=>{
+
+
+        icono.style.transform=
+        "scale(1.08)";
+
+
+    });
+
+
+
+    icono.addEventListener(
+    "mouseleave",
+    ()=>{
+
+
+        icono.style.transform=
+        "scale(1)";
+
+
+    });
+
+
+
+});
+
+
+
+
+
+
+
+/* ==========================
+      MENSAJE CONSOLA
+========================== */
+
+
+console.log(
+"🫧 Pérez Limpieza cargado correctamente"
+);
+
+console.log(
+"🧽 Limpieza de calidad activada"
+);
