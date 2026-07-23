@@ -8,640 +8,1304 @@
 
 <title>Pérez Limpieza | Limpieza de Calidad</title>
 
-<link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
 
-</head>
+/* =====================
+   CONFIGURACIÓN GENERAL
+===================== */
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
 
-<body>
+html{
+scroll-behavior:smooth;
+}
 
 
-<!-- ================= LOADER ================= -->
+body{
 
-<div id="loader">
+background:
+linear-gradient(
+180deg,
+#ffffff,
+#eaffef
+);
 
-    <div class="loader-content">
+color:#222;
 
-        <div class="esponja">
-            🧽
-        </div>
+overflow-x:hidden;
 
-        <h2>
-            Cargando<span></span>
-        </h2>
+}
 
-    </div>
 
-</div>
 
+:root{
 
-<!-- ================= SIN INTERNET ================= -->
+--verde:#1fa64a;
+--verde2:#0e7a32;
+--rojo:#ff3030;
 
-<div id="offline">
+}
 
-    <div class="offline-content">
 
-        <div class="escoba">
-            🧹
-        </div>
 
-        <h2>
-            Buscando la señal...
-        </h2>
 
-        <p>
-            Parece que no hay conexión a internet
-        </p>
 
-    </div>
 
-</div>
+/* =====================
+       LOADER
+===================== */
 
 
+#loader{
 
-<!-- ================= BURBUJAS ================= -->
+position:fixed;
 
-<div class="burbujas">
+width:100%;
+height:100%;
 
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
+background:white;
 
-</div>
+z-index:9999;
 
+display:flex;
 
+justify-content:center;
 
-<!-- ================= HEADER ================= -->
+align-items:center;
 
+}
 
-<header>
 
-<nav>
 
+.loader-box{
 
-<div class="logo">
+text-align:center;
 
-🫧 Pérez Limpieza
+}
 
-</div>
 
 
-<ul>
+.esponja{
 
-<li>
-<a href="#inicio">
-Inicio
-</a>
-</li>
+font-size:100px;
 
+animation:
 
-<li>
-<a href="#nosotros">
-¿Por qué elegirnos?
-</a>
-</li>
+lavar 2s infinite;
 
+}
 
-<li>
-<a href="#productos">
-Productos
-</a>
-</li>
 
 
-<li>
-<a href="#contacto">
-Contacto
-</a>
-</li>
+@keyframes lavar{
 
 
-</ul>
+0%{
 
+transform:translateX(-50px) rotate(-20deg);
 
-</nav>
+}
 
-</header>
 
+50%{
 
+transform:translateX(50px) rotate(20deg);
 
+}
 
-<!-- ================= INICIO ================= -->
 
+100%{
 
-<section class="inicio" id="inicio">
+transform:translateX(-50px) rotate(-20deg);
 
+}
 
-<div class="inicio-texto">
+}
 
 
-<h1>
 
-🧼 Productos de limpieza de calidad profesional
+.loader-box h2{
 
-</h1>
+color:var(--verde);
 
+font-size:35px;
 
-<p>
+margin-top:20px;
 
-Soluciones para hogares, comercios y empresas.
+}
 
-</p>
 
 
-<a href="#productos" class="boton-principal">
+.loader-box span::after{
 
-Ver productos
+content:"";
 
-</a>
+animation:puntos 1.5s infinite;
 
+}
 
-</div>
 
 
+@keyframes puntos{
 
-<div class="inicio-imagen">
+0%{content:"";}
 
-🧴🫧
+33%{content:".";}
 
-</div>
+66%{content:".."}
 
+100%{content:"..."}
 
+}
 
-</section>
 
 
 
 
 
-<!-- ================= PORQUE ELEGIRNOS ================= -->
+/* =====================
+     SIN INTERNET
+===================== */
 
 
-<section id="nosotros" class="porque">
+#offline{
 
+display:none;
 
-<h2>
+position:fixed;
 
-✨ ¿Por qué elegir Pérez Limpieza?
+width:100%;
+height:100%;
 
-</h2>
+background:white;
 
+z-index:9998;
 
+justify-content:center;
 
-<div class="beneficios">
+align-items:center;
 
+}
 
-<div class="beneficio">
 
-🧽
 
-<h3>
-Calidad
-</h3>
+.offline-box{
 
-<p>
-Productos seleccionados para una limpieza efectiva.
-</p>
+text-align:center;
 
-</div>
+}
 
 
 
-<div class="beneficio">
+.escoba{
 
-🧴
+font-size:100px;
 
-<h3>
-Rendimiento
-</h3>
+animation:barrer 2s infinite alternate;
 
-<p>
-Productos concentrados que duran más.
-</p>
+}
 
-</div>
 
 
+@keyframes barrer{
 
-<div class="beneficio">
+from{
 
-🚚
+transform:translateX(-80px);
 
-<h3>
-Rapidez
-</h3>
+}
 
-<p>
-Atención rápida y personalizada.
-</p>
+to{
 
-</div>
+transform:translateX(80px);
 
+}
 
+}
 
-<div class="beneficio">
 
-⭐
 
-<h3>
-Confianza
-</h3>
+.offline-box h2{
 
-<p>
-Clientes satisfechos con nuestros productos.
-</p>
+color:var(--verde);
 
-</div>
+font-size:35px;
 
+}
 
 
-</div>
 
 
-</section>
 
 
+/* =====================
+      BURBUJAS
+===================== */
 
 
+.burbujas{
 
-<!-- ================= PRODUCTOS ================= -->
+position:fixed;
 
+width:100%;
+height:100%;
 
-<section id="productos" class="productos">
+z-index:-1;
 
+}
 
-<h2>
 
-🧺 Nuestros Productos
 
-</h2>
+.burbujas span{
 
+position:absolute;
 
+bottom:-100px;
 
-<div class="categorias">
+width:35px;
 
+height:35px;
 
-<button class="categoria activo" data-categoria="todos">
+background:#1fa64a30;
 
-🧴 Todos
+border-radius:50%;
 
-</button>
+animation:subir 15s infinite;
 
+}
 
-<button class="categoria" data-categoria="pisos">
 
-🪣 Pisos
 
-</button>
+.burbujas span:nth-child(1){
 
+left:10%;
 
-<button class="categoria" data-categoria="ropa">
+}
 
-👕 Ropa
 
-</button>
+.burbujas span:nth-child(2){
 
+left:30%;
 
-<button class="categoria" data-categoria="cocina">
+animation-duration:20s;
 
-🍽 Cocina
+}
 
-</button>
 
+.burbujas span:nth-child(3){
 
-<button class="categoria" data-categoria="manos">
+left:60%;
 
-🧼 Manos
+width:50px;
+height:50px;
 
-</button>
+animation-duration:25s;
 
+}
 
-<button class="categoria" data-categoria="bolsas">
 
-🗑 Bolsas
+.burbujas span:nth-child(4){
 
-</button>
+left:80%;
 
+}
 
 
-</div>
+.burbujas span:nth-child(5){
 
+left:90%;
 
+}
 
-<div class="productos-container">
 
 
 
-<div class="producto" data-tipo="cocina">
 
+@keyframes subir{
 
-<img src="imagenes/detergente.png">
 
+to{
 
-<h3>
+transform:translateY(-120vh);
 
-Detergente 12% Amarillo
+opacity:0;
 
-</h3>
+}
 
 
-<p>
+}
 
-Limpieza profunda para cocina.
 
-</p>
 
 
-<a href="#" class="whatsapp">
 
-Consultar
 
-</a>
+/* =====================
+       HEADER
+===================== */
 
 
-</div>
+header{
 
+position:fixed;
 
+top:0;
 
+width:100%;
 
+padding:20px 8%;
 
-<div class="producto" data-tipo="ropa">
+background:#ffffffcc;
 
+backdrop-filter:blur(15px);
 
-<img src="imagenes/jabon-ropa.png">
+z-index:1000;
 
+box-shadow:0 5px 20px #0002;
 
-<h3>
+}
 
-Jabón líquido para ropa
 
-</h3>
 
+nav{
 
-<p>
+display:flex;
 
-Baja espuma y gran rendimiento.
+justify-content:space-between;
 
-</p>
+align-items:center;
 
+}
 
-<a href="#" class="whatsapp">
 
-Consultar
 
-</a>
+.logo{
 
+font-size:28px;
 
-</div>
+font-weight:bold;
 
+color:var(--verde);
 
+}
 
 
-<div class="producto" data-tipo="ropa">
 
+nav ul{
 
-<img src="imagenes/suavizante.png">
+display:flex;
 
+gap:25px;
 
-<h3>
+list-style:none;
 
-Suavizante triple perfume
+}
 
-</h3>
 
 
-<p>
+nav a{
 
-Deja una fragancia duradera.
+text-decoration:none;
 
-</p>
+color:#333;
 
+font-weight:bold;
 
-<a href="#" class="whatsapp">
+transition:.3s;
 
-Consultar
+}
 
-</a>
 
 
-</div>
+nav a:hover{
 
+color:var(--verde);
 
+}
 
 
-</div>
+<style>
 
+/* =====================
+        INICIO
+===================== */
 
-</section><!-- ================= OPINIONES ================= -->
 
-<section class="opiniones" id="opiniones">
+.inicio{
 
-<h2>
+min-height:100vh;
 
-⭐ Opiniones de clientes
+padding:150px 8% 80px;
 
-</h2>
+display:flex;
 
+align-items:center;
 
-<div class="opiniones-container">
+justify-content:space-between;
 
+gap:50px;
 
-<div class="opinion">
+}
 
-<div class="estrellas">
-★★★★★
-</div>
 
-<p>
 
-"Excelentes productos, muy buena calidad y atención."
+.inicio-texto{
 
-</p>
+max-width:700px;
 
-<h4>
+}
 
-Cliente Pérez
 
-</h4>
 
-</div>
+.inicio h1{
 
+font-size:60px;
 
+color:var(--verde);
 
-<div class="opinion">
+line-height:1.2;
 
-<div class="estrellas">
-★★★★★
-</div>
+}
 
-<p>
 
-"Los productos rinden muchísimo y tienen muy buen aroma."
 
-</p>
+.inicio p{
 
-<h4>
+font-size:22px;
 
-Cliente Limpio
+color:#666;
 
-</h4>
+margin-top:25px;
 
-</div>
+}
 
 
 
+.boton{
 
-<div class="opinion">
+display:inline-block;
 
-<div class="estrellas">
-★★★★★
-</div>
+margin-top:35px;
 
-<p>
+padding:18px 40px;
 
-"Siempre compro porque tienen buenos precios."
+border-radius:50px;
 
-</p>
+background:var(--verde);
 
-<h4>
+color:white;
 
-Cliente Feliz
+text-decoration:none;
 
-</h4>
+font-size:20px;
 
-</div>
+font-weight:bold;
 
+transition:.3s;
 
-</div>
+}
 
 
-</section>
 
+.boton:hover{
 
+transform:scale(1.08);
 
+}
 
 
-<!-- ================= ENVÍOS ================= -->
 
+.inicio-icono{
 
-<section class="envios">
+font-size:150px;
 
+animation:flotar 3s infinite;
 
-<div class="envio-box">
+}
 
 
-<div class="icono-envio">
 
-🚚
+@keyframes flotar{
 
-</div>
+50%{
 
+transform:translateY(-20px);
 
-<h2>
+}
 
-Envíos y atención rápida
+}
 
-</h2>
 
 
-<p>
 
-Consultanos por WhatsApp y coordinamos tu pedido de manera fácil y rápida.
 
-</p>
 
 
-</div>
+/* =====================
+     PORQUE ELEGIRNOS
+===================== */
 
 
-</section>
+.porque,
+.productos,
+.opiniones,
+.preguntas,
+.calidad{
 
+padding:100px 8%;
 
+}
 
 
 
-<!-- ================= PREGUNTAS FRECUENTES ================= -->
+h2{
+
+text-align:center;
+
+font-size:45px;
+
+color:var(--verde);
+
+margin-bottom:50px;
+
+}
+
+
+
+.beneficios{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+
+
+.beneficio{
+
+background:white;
+
+padding:35px;
+
+border-radius:25px;
+
+text-align:center;
+
+box-shadow:0 15px 35px #0002;
+
+transition:.4s;
+
+font-size:50px;
+
+}
+
+
+
+.beneficio:hover{
+
+transform:translateY(-15px);
+
+}
+
+
+
+.beneficio h3{
+
+font-size:25px;
+
+color:var(--verde);
+
+margin-top:15px;
+
+}
+
+
+
+.beneficio p{
+
+font-size:16px;
+
+color:#666;
+
+margin-top:10px;
+
+}
+
+
+
+
+
+
+
+/* =====================
+       PRODUCTOS
+===================== */
+
+
+.productos{
+
+background:#f2fff6;
+
+}
+
+
+
+.categorias{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:15px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.categoria{
+
+border:none;
+
+padding:15px 25px;
+
+border-radius:50px;
+
+background:white;
+
+cursor:pointer;
+
+font-weight:bold;
+
+font-size:16px;
+
+transition:.3s;
+
+box-shadow:0 10px 20px #0002;
+
+}
+
+
+
+.categoria:hover,
+.categoria.activo{
+
+background:var(--verde);
+
+color:white;
+
+}
+
+
+
+.productos-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(270px,1fr));
+
+gap:35px;
+
+}
+
+
+
+.producto{
+
+background:white;
+
+border-radius:25px;
+
+padding-bottom:25px;
+
+overflow:hidden;
+
+box-shadow:0 15px 35px #0002;
+
+transition:.4s;
+
+}
+
+
+
+.producto:hover{
+
+transform:translateY(-10px);
+
+}
+
+
+
+.producto img{
+
+width:100%;
+
+height:260px;
+
+object-fit:contain;
+
+background:#eaffef;
+
+}
+
+
+
+.producto h3{
+
+text-align:center;
+
+font-size:24px;
+
+color:var(--verde);
+
+padding:20px;
+
+}
+
+
+
+.producto p{
+
+text-align:center;
+
+color:#666;
+
+padding:0 20px 20px;
+
+}
+
+
+
+.whatsapp{
+
+display:block;
+
+width:80%;
+
+margin:auto;
+
+background:var(--rojo);
+
+color:white;
+
+padding:15px;
+
+border-radius:50px;
+
+text-align:center;
+
+text-decoration:none;
+
+font-weight:bold;
+
+}
+
+
+
+.whatsapp:hover{
+
+background:#c90000;
+
+}
+
+
+
+
+
+
+
+/* =====================
+       OPINIONES
+===================== */
+
+
+.opiniones-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+}
+
+
+
+.opinion{
+
+background:white;
+
+padding:35px;
+
+border-radius:25px;
+
+box-shadow:0 15px 35px #0002;
+
+text-align:center;
+
+}
+
+
+
+.estrellas{
+
+color:#ffc400;
+
+font-size:30px;
+
+}
+
+
+
+.opinion p{
+
+margin:20px 0;
+
+color:#666;
+
+}
+
+
+
+
+
+
+
+/* =====================
+        ENVIO
+===================== */
+
+
+.envio-box{
+
+background:var(--verde);
+
+color:white;
+
+padding:50px;
+
+border-radius:30px;
+
+text-align:center;
+
+}
+
+
+
+.camion{
+
+font-size:70px;
+
+animation:mover 2s infinite alternate;
+
+}
+
+
+
+@keyframes mover{
+
+from{
+
+transform:translateX(-20px);
+
+}
+
+to{
+
+transform:translateX(20px);
+
+}
+
+}
+
+</style><style>
+
+/* =====================
+      PREGUNTAS
+===================== */
+
+
+.pregunta{
+
+max-width:900px;
+
+margin:20px auto;
+
+background:white;
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:0 10px 25px #0002;
+
+}
+
+
+
+.pregunta button{
+
+width:100%;
+
+padding:25px;
+
+border:none;
+
+background:white;
+
+font-size:20px;
+
+font-weight:bold;
+
+text-align:left;
+
+cursor:pointer;
+
+color:var(--verde);
+
+}
+
+
+
+.pregunta p{
+
+padding:0 25px 25px;
+
+color:#666;
+
+}
+
+
+
+
+
+/* =====================
+    LIMPIEZA CALIDAD
+===================== */
+
+
+.calidad{
+
+text-align:center;
+
+background:white;
+
+}
+
+
+
+.calidad-icono{
+
+font-size:90px;
+
+animation:flotar 3s infinite;
+
+}
+
+
+
+.calidad h2{
+
+font-size:55px;
+
+}
+
+
+
+.calidad p{
+
+max-width:850px;
+
+margin:auto;
+
+font-size:20px;
+
+color:#666;
+
+line-height:1.7;
+
+}
+
+
+
+.detalles-calidad{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+margin-top:50px;
+
+}
+
+
+
+.detalles-calidad div{
+
+background:#eaffef;
+
+padding:30px;
+
+border-radius:25px;
+
+font-size:22px;
+
+color:var(--verde);
+
+font-weight:bold;
+
+}
+
+
+
+
+
+
+/* =====================
+        FOOTER
+===================== */
+
+
+footer{
+
+background:var(--verde2);
+
+color:white;
+
+padding:60px 20px;
+
+text-align:center;
+
+}
+
+
+
+.footer-logo{
+
+font-size:35px;
+
+font-weight:bold;
+
+margin-bottom:20px;
+
+}
+
+
+
+.boton-footer{
+
+display:inline-block;
+
+background:var(--rojo);
+
+color:white;
+
+text-decoration:none;
+
+padding:18px 35px;
+
+border-radius:50px;
+
+margin:25px;
+
+font-weight:bold;
+
+}
+
+
+
+
+/* =====================
+ WHATSAPP FLOTANTE
+===================== */
+
+
+.whatsapp-flotante{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+width:65px;
+
+height:65px;
+
+border-radius:50%;
+
+background:#25D366;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+color:white;
+
+font-size:35px;
+
+text-decoration:none;
+
+z-index:999;
+
+animation:pulso 2s infinite;
+
+}
+
+
+
+@keyframes pulso{
+
+50%{
+
+transform:scale(1.15);
+
+}
+
+}
+
+
+
+
+
+/* CELULAR */
+
+
+@media(max-width:800px){
+
+
+nav{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+
+
+.inicio{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+
+
+.inicio h1{
+
+font-size:38px;
+
+}
+
+
+
+.inicio-icono{
+
+font-size:90px;
+
+}
+
+
+h2{
+
+font-size:35px;
+
+}
+
+
+}
+
+</style>
+
+
+
+
+
+<!-- =====================
+      CONTENIDO HTML
+===================== -->
 
 
 <section class="preguntas">
 
 
 <h2>
-
 ❓ Preguntas frecuentes
-
 </h2>
 
 
-
 <div class="pregunta">
 
-
 <button>
-
 🧴 ¿Qué productos venden?
-
 </button>
 
-
 <p>
-
-Vendemos productos de limpieza para pisos, ropa, cocina, manos y más.
-
+Vendemos productos para pisos, ropa, cocina, manos y bolsas.
 </p>
 
-
 </div>
-
 
 
 
 <div class="pregunta">
 
-
 <button>
-
-🫧 ¿Los productos son concentrados?
-
+🫧 ¿Son productos concentrados?
 </button>
 
-
 <p>
-
-Sí, están preparados para tener un gran rendimiento.
-
+Sí, tienen gran rendimiento y calidad.
 </p>
 
-
 </div>
-
-
 
 
 
 <div class="pregunta">
 
-
 <button>
-
-📱 ¿Cómo puedo comprar?
-
+📱 ¿Cómo compro?
 </button>
 
-
 <p>
-
-Podés consultar directamente por WhatsApp.
-
+Podés consultar por WhatsApp directamente.
 </p>
 
-
 </div>
-
 
 
 </section>
@@ -649,10 +1313,6 @@ Podés consultar directamente por WhatsApp.
 
 
 
-
-
-
-<!-- ================= CALIDAD ================= -->
 
 
 <section class="calidad">
@@ -660,63 +1320,45 @@ Podés consultar directamente por WhatsApp.
 
 <div class="calidad-icono">
 
-🫧🧽
+🧽🫧
 
 </div>
-
 
 
 <h2>
-
 Limpieza de Calidad
-
 </h2>
 
 
-
 <p>
-
-En Pérez Limpieza trabajamos para ofrecer productos confiables, eficientes y de excelente rendimiento para que cada espacio quede impecable.
-
+En Pérez Limpieza ofrecemos productos confiables para que cada espacio quede limpio, fresco y cuidado.
 </p>
 
 
-
-<div class="limpieza-detalles">
-
+<div class="detalles-calidad">
 
 <div>
-
 ✨
 <br>
-
 Calidad
-
 </div>
 
 
 <div>
-
 🧴
 <br>
-
 Rendimiento
-
 </div>
 
 
 <div>
-
 🌿
 <br>
-
 Frescura
-
 </div>
 
 
 </div>
-
 
 
 </section>
@@ -724,9 +1366,6 @@ Frescura
 
 
 
-
-
-<!-- ================= CONTACTO ================= -->
 
 
 <footer id="contacto">
@@ -739,19 +1378,15 @@ Frescura
 </div>
 
 
-
 <h3>
-
-¿Necesitás productos de limpieza?
-
+Productos de limpieza profesionales
 </h3>
 
 
 
-<a 
+<a class="boton-footer"
 href="https://wa.me/5491171005652"
-target="_blank"
-class="boton-footer">
+target="_blank">
 
 💬 Consultar por WhatsApp
 
@@ -760,9 +1395,7 @@ class="boton-footer">
 
 
 <p>
-
 © 2026 Pérez Limpieza - Limpieza de calidad
-
 </p>
 
 
@@ -773,13 +1406,9 @@ class="boton-footer">
 
 
 
-<!-- ================= BOTÓN WHATSAPP FLOTANTE ================= -->
-
-
-<a 
+<a class="whatsapp-flotante"
 href="https://wa.me/5491171005652"
-target="_blank"
-class="whatsapp-flotante">
+target="_blank">
 
 💬
 
@@ -789,2968 +1418,137 @@ class="whatsapp-flotante">
 
 
 
-<script src="script.js"></script>
+
+
+<script>
+
+
+// CARGA
+
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+
+document.getElementById("loader").style.display="none";
+
+},2000);
+
+
+});
+
+
+
+
+// SIN INTERNET
+
+
+function revisarInternet(){
+
+if(!navigator.onLine){
+
+document.getElementById("offline").style.display="flex";
+
+}else{
+
+document.getElementById("offline").style.display="none";
+
+}
+
+}
+
+
+window.addEventListener("offline",revisarInternet);
+
+window.addEventListener("online",revisarInternet);
+
+
+
+
+
+
+
+// FILTRO PRODUCTOS
+
+
+let botones=document.querySelectorAll(".categoria");
+
+let productos=document.querySelectorAll(".producto");
+
+
+botones.forEach(btn=>{
+
+
+btn.onclick=()=>{
+
+
+botones.forEach(b=>b.classList.remove("activo"));
+
+btn.classList.add("activo");
+
+
+let cat=btn.dataset.cat;
+
+
+productos.forEach(p=>{
+
+
+if(cat=="todos" || p.dataset.tipo==cat){
+
+p.style.display="block";
+
+}else{
+
+p.style.display="none";
+
+}
+
+
+});
+
+
+}
+
+
+});
+
+
+
+
+
+
+// WHATSAPP PRODUCTO
+
+
+document.querySelectorAll(".whatsapp").forEach(btn=>{
+
+
+btn.onclick=()=>{
+
+
+let producto=
+btn.parentElement.querySelector("h3").innerText;
+
+
+let mensaje=
+"Hola, me interesa el producto: "+producto;
+
+
+window.open(
+"https://wa.me/5491171005652?text="+
+encodeURIComponent(mensaje)
+);
+
+
+}
+
+
+});
+
+
+
+</script>
 
 
 </body>
 
-</html>*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-
-:root{
-
-    --verde:#1fa64a;
-    --verde-claro:#dff9e7;
-    --verde-fuerte:#117a34;
-    --blanco:#ffffff;
-    --gris:#666;
-    --rojo:#ff3030;
-
-}
-
-
-html{
-
-    scroll-behavior:smooth;
-
-}
-
-
-
-body{
-
-    background:linear-gradient(
-        180deg,
-        #ffffff,
-        #f1fff5
-    );
-
-    color:#222;
-    overflow-x:hidden;
-
-}
-
-
-
-
-/* =========================
-        BURBUJAS
-========================= */
-
-
-.burbujas{
-
-    position:fixed;
-    width:100%;
-    height:100%;
-    top:0;
-    left:0;
-    z-index:-1;
-    overflow:hidden;
-
-}
-
-
-
-.burbujas span{
-
-    position:absolute;
-    bottom:-100px;
-    width:35px;
-    height:35px;
-    background:rgba(31,166,74,.15);
-    border-radius:50%;
-    animation:subir 18s linear infinite;
-
-}
-
-
-
-.burbujas span:nth-child(1){
-
-    left:10%;
-    animation-duration:15s;
-
-}
-
-
-
-.burbujas span:nth-child(2){
-
-    left:30%;
-    width:20px;
-    height:20px;
-    animation-duration:20s;
-
-}
-
-
-
-.burbujas span:nth-child(3){
-
-    left:55%;
-    width:45px;
-    height:45px;
-    animation-duration:22s;
-
-}
-
-
-
-.burbujas span:nth-child(4){
-
-    left:75%;
-    animation-duration:17s;
-
-}
-
-
-
-.burbujas span:nth-child(5){
-
-    left:90%;
-    width:25px;
-    height:25px;
-    animation-duration:25s;
-
-}
-
-
-
-@keyframes subir{
-
-
-0%{
-
-    transform:translateY(0);
-    opacity:0;
-
-}
-
-
-20%{
-
-    opacity:1;
-
-}
-
-
-100%{
-
-    transform:translateY(-120vh);
-    opacity:0;
-
-}
-
-
-}
-
-
-
-
-
-/* =========================
-          LOADER
-========================= */
-
-
-
-#loader{
-
-    position:fixed;
-    width:100%;
-    height:100%;
-    background:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    z-index:9999;
-
-}
-
-
-
-.loader-content{
-
-    text-align:center;
-
-}
-
-
-
-.esponja{
-
-    font-size:100px;
-    animation:limpiar 2s infinite;
-
-}
-
-
-
-@keyframes limpiar{
-
-
-0%{
-
-    transform:translateX(-80px) rotate(-20deg);
-
-}
-
-
-50%{
-
-    transform:translateX(80px) rotate(20deg);
-
-}
-
-
-100%{
-
-    transform:translateX(-80px) rotate(-20deg);
-
-}
-
-
-}
-
-
-
-
-.loader-content h2{
-
-    margin-top:25px;
-    color:var(--verde);
-    font-size:35px;
-
-}
-
-
-
-
-.loader-content h2 span::after{
-
-    content:"";
-    animation:puntos 1.5s infinite;
-
-}
-
-
-
-@keyframes puntos{
-
-
-0%{
-
-content:"";
-
-}
-
-
-33%{
-
-content:".";
-
-}
-
-
-66%{
-
-content:"..";
-
-}
-
-
-100%{
-
-content:"...";
-
-}
-
-
-}
-
-
-
-
-
-/* =========================
-       SIN INTERNET
-========================= */
-
-
-
-#offline{
-
-    display:none;
-    position:fixed;
-    width:100%;
-    height:100%;
-    background:white;
-    z-index:9998;
-    justify-content:center;
-    align-items:center;
-
-}
-
-
-
-.offline-content{
-
-    text-align:center;
-
-}
-
-
-
-.escoba{
-
-    font-size:100px;
-    animation:barrer 2s infinite alternate;
-
-}
-
-
-
-@keyframes barrer{
-
-
-from{
-
-    transform:translateX(-100px);
-
-}
-
-
-to{
-
-    transform:translateX(100px);
-
-}
-
-
-}
-
-
-
-
-.offline-content h2{
-
-    color:var(--verde);
-    font-size:38px;
-    margin-top:20px;
-
-}
-
-
-
-.offline-content p{
-
-    color:#777;
-    margin-top:10px;
-    font-size:18px;
-
-}/* =========================
-        HEADER
-========================= */
-
-
-header{
-
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    padding:20px 8%;
-    z-index:1000;
-
-    background:rgba(255,255,255,.75);
-    backdrop-filter:blur(15px);
-
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-
-}
-
-
-
-nav{
-
-    max-width:1300px;
-    margin:auto;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-}
-
-
-
-.logo{
-
-    font-size:30px;
-    font-weight:800;
-    color:var(--verde);
-
-    animation:flotar 3s infinite;
-
-}
-
-
-
-@keyframes flotar{
-
-
-0%,100%{
-
-    transform:translateY(0);
-
-}
-
-
-50%{
-
-    transform:translateY(-7px);
-
-}
-
-
-}
-
-
-
-nav ul{
-
-    display:flex;
-    gap:30px;
-    list-style:none;
-
-}
-
-
-
-nav ul li a{
-
-    text/* =========================
-          INICIO
-========================= */
-
-
-.inicio{
-
-    min-height:100vh;
-
-    padding:150px 8% 80px;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    gap:50px;
-
-}
-
-
-
-.inicio-texto{
-
-    max-width:700px;
-
-    animation:aparecerIzquierda 1s ease;
-
-}
-
-
-
-.inicio-texto h1{
-
-    font-size:60px;
-
-    line-height:1.2;
-
-    color:var(--verde);
-
-    font-weight:800;
-
-}
-
-
-
-.inicio-texto p{
-
-    margin-top:25px;
-
-    font-size:22px;
-
-    color:#666;
-
-    line-height:1.8;
-
-}
-
-
-
-
-.boton-principal{
-
-    display:inline-block;
-
-    margin-top:40px;
-
-    padding:18px 45px;
-
-    border-radius:50px;
-
-    background:linear-gradient(
-        90deg,
-        var(--verde),
-        #45d477
-    );
-
-    color:white;
-
-    text-decoration:none;
-
-    font-size:20px;
-
-    font-weight:700;
-
-    box-shadow:
-    0 15px 35px rgba(31,166,74,.35);
-
-    position:relative;
-
-    overflow:hidden;
-
-    transition:.4s;
-
-}
-
-
-
-
-.boton-principal::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-
-    left:-120%;
-
-    width:80%;
-
-    height:100%;
-
-    background:rgba(255,255,255,.4);
-
-    transform:skewX(-25deg);
-
-}
-
-
-
-.boton-principal:hover::before{
-
-    left:130%;
-
-    transition:.8s;
-
-}
-
-
-
-
-.boton-principal:hover{
-
-    transform:translateY(-8px) scale(1.05);
-
-}
-
-
-
-
-
-.inicio-imagen{
-
-    font-size:150px;
-
-    animation:flotarLimpieza 3s infinite;
-
-}
-
-
-
-@keyframes flotarLimpieza{
-
-
-0%,100%{
-
-    transform:translateY(0);
-
-}
-
-
-50%{
-
-    transform:translateY(-25px);
-
-}
-
-
-}
-
-
-
-
-
-/* =========================
-     ANIMACIONES ENTRADA
-========================= */
-
-
-
-@keyframes aparecerIzquierda{
-
-
-from{
-
-    opacity:0;
-
-    transform:translateX(-80px);
-
-}
-
-
-to{
-
-    opacity:1;
-
-    transform:translateX(0);
-
-}
-
-
-}
-
-
-
-
-
-
-/* =========================
-      TITULOS GENERALES
-========================= */
-
-
-.porque h2,
-.productos h2,
-.opiniones h2,
-.preguntas h2{
-
-
-    text-align:center;
-
-    font-size:48px;
-
-    color:var(--verde);
-
-    font-weight:800;
-
-    margin-bottom:60px;
-
-
-}
-/* =========================
-      POR QUÉ ELEGIRNOS
-========================= */
-
-
-.porque{
-
-    padding:110px 8%;
-
-}
-
-
-
-.beneficios{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
-
-    gap:35px;
-
-}
-
-
-
-
-.beneficio{
-
-    background:
-    rgba(255,255,255,.75);
-
-    backdrop-filter:blur(12px);
-
-    border-radius:30px;
-
-    padding:45px 30px;
-
-    text-align:center;
-
-    box-shadow:
-    0 15px 40px rgba(0,0,0,.08);
-
-    transition:.4s;
-
-    position:relative;
-
-    overflow:hidden;
-
-}
-
-
-
-
-.beneficio::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:200px;
-
-    height:200px;
-
-    background:
-    rgba(31,166,74,.15);
-
-    border-radius:50%;
-
-    top:-100px;
-
-    right:-100px;
-
-    transition:.5s;
-
-}
-
-
-
-.beneficio:hover::before{
-
-    transform:scale(3);
-
-}
-
-
-
-
-.beneficio:hover{
-
-    transform:
-    translateY(-15px);
-
-    box-shadow:
-    0 25px 50px rgba(0,0,0,.15);
-
-}
-
-
-
-
-.beneficio:first-letter{
-
-    font-size:60px;
-
-}
-
-
-
-
-.beneficio h3{
-
-    margin-top:25px;
-
-    color:var(--verde);
-
-    font-size:28px;
-
-    font-weight:700;
-
-}
-
-
-
-
-.beneficio p{
-
-    margin-top:15px;
-
-    color:#666;
-
-    font-size:17px;
-
-    line-height:1.7;
-
-}
-
-
-
-
-
-
-/* =========================
-      EFECTO APARECER
-========================= */
-
-
-.beneficio{
-
-    animation:
-    aparecerArriba .8s ease;
-
-}
-
-
-
-
-@keyframes aparecerArriba{
-
-
-from{
-
-    opacity:0;
-
-    transform:
-    translateY(50px);
-
-}
-
-
-to{
-
-    opacity:1;
-
-    transform:
-    translateY(0);
-
-}
-
-
-}/* =========================
-          PRODUCTOS
-========================= */
-
-
-.productos{
-
-    padding:110px 8%;
-
-    background:
-    linear-gradient(
-    180deg,
-    #ffffff,
-    #effff4
-    );
-
-}
-
-
-
-.categorias{
-
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:18px;
-
-    margin-bottom:60px;
-
-}
-
-
-
-
-
-.categoria{
-
-    border:none;
-
-    cursor:pointer;
-
-    padding:15px 28px;
-
-    border-radius:50px;
-
-    font-size:17px;
-
-    font-weight:700;
-
-    background:white;
-
-    color:#333;
-
-    box-shadow:
-    0 10px 25px rgba(0,0,0,.08);
-
-    transition:.35s;
-
-}
-
-
-
-
-
-.categoria:hover,
-.categoria.activo{
-
-
-    background:var(--verde);
-
-    color:white;
-
-    transform:
-    translateY(-5px);
-
-    box-shadow:
-    0 15px 35px rgba(31,166,74,.35);
-
-
-}
-
-
-
-
-
-
-.productos-container{
-
-
-    display:grid;
-
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
-
-
-    gap:35px;
-
-
-}
-
-
-
-
-
-.producto{
-
-
-    background:white;
-
-
-    border-radius:30px;
-
-
-    padding-bottom:30px;
-
-
-    overflow:hidden;
-
-
-    box-shadow:
-
-    0 15px 35px rgba(0,0,0,.10);
-
-
-    transition:.4s;
-
-
-    animation:
-    aparecerProducto .8s ease;
-
-
-}
-
-
-
-
-.producto:hover{
-
-
-    transform:
-    translateY(-12px);
-
-
-    box-shadow:
-
-    0 25px 55px rgba(0,0,0,.18);
-
-
-}
-
-
-
-
-
-.producto img{
-
-
-    width:100%;
-
-
-    height:280px;
-
-
-    object-fit:contain;
-
-
-    padding:20px;
-
-
-    background:
-    #f1fff5;
-
-
-    transition:.5s;
-
-
-}
-
-
-
-
-.producto:hover img{
-
-
-    transform:
-    scale(1.1);
-
-
-}
-
-
-
-
-.producto h3{
-
-
-    text-align:center;
-
-
-    font-size:25px;
-
-
-    color:var(--verde);
-
-
-    padding:20px 15px 10px;
-
-
-}
-
-
-
-
-
-.producto p{
-
-
-    text-align:center;
-
-
-    color:#666;
-
-
-    padding:0 25px 20px;
-
-
-    line-height:1.6;
-
-
-}
-
-
-
-
-
-
-/* =========================
-      BOTÓN WHATSAPP
-========================= */
-
-
-.whatsapp{
-
-
-    display:block;
-
-
-    width:85%;
-
-
-    margin:auto;
-
-
-    text-align:center;
-
-
-    padding:16px;
-
-
-    border-radius:50px;
-
-
-    background:
-
-    linear-gradient(
-    90deg,
-    #ff3030,
-    #d60000
-    );
-
-
-    color:white;
-
-
-    text-decoration:none;
-
-
-    font-size:18px;
-
-
-    font-weight:700;
-
-
-    transition:.35s;
-
-
-    position:relative;
-
-
-    overflow:hidden;
-
-
-}
-
-
-
-
-.whatsapp::before{
-
-
-    content:"";
-
-
-    position:absolute;
-
-
-    left:-120%;
-
-
-    top:0;
-
-
-    width:70%;
-
-
-    height:100%;
-
-
-    background:
-    rgba(255,255,255,.4);
-
-
-    transform:
-    skewX(-25deg);
-
-
-}
-
-
-
-
-
-.whatsapp:hover::before{
-
-
-    left:130%;
-
-
-    transition:.8s;
-
-
-}
-
-
-
-
-.whatsapp:hover{
-
-
-    transform:
-    scale(1.05);
-
-
-    box-shadow:
-
-    0 15px 30px rgba(255,0,0,.35);
-
-
-}
-
-
-
-
-
-
-@keyframes aparecerProducto{
-
-
-from{
-
-
-    opacity:0;
-
-
-    transform:
-    translateY(60px);
-
-
-}
-
-
-to{
-
-
-    opacity:1;
-
-
-    transform:
-    translateY(0);
-
-
-}
-
-
-}
-/* =========================
-        OPINIONES
-========================= */
-
-
-.opiniones{
-
-    padding:110px 8%;
-
-}
-
-
-
-.opiniones-container{
-
-
-    display:grid;
-
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
-
-
-    gap:35px;
-
-
-}
-
-
-
-
-
-.opinion{
-
-
-    background:white;
-
-
-    padding:35px;
-
-
-    border-radius:30px;
-
-
-    text-align:center;
-
-
-    box-shadow:
-
-    0 15px 35px rgba(0,0,0,.08);
-
-
-    transition:.4s;
-
-
-}
-
-
-
-
-
-.opinion:hover{
-
-
-    transform:
-    translateY(-10px);
-
-
-}
-
-
-
-
-.estrellas{
-
-
-    color:#ffc107;
-
-
-    font-size:30px;
-
-
-    letter-spacing:5px;
-
-
-}
-
-
-
-
-
-.opinion p{
-
-
-    margin-top:20px;
-
-
-    color:#666;
-
-
-    line-height:1.7;
-
-
-    font-size:17px;
-
-
-}
-
-
-
-
-
-.opinion h4{
-
-
-    margin-top:20px;
-
-
-    color:var(--verde);
-
-
-}
-
-
-
-
-
-
-/* =========================
-          ENVIOS
-========================= */
-
-
-.envios{
-
-
-    padding:80px 8%;
-
-
-}
-
-
-
-
-
-.envio-box{
-
-
-    background:
-
-    linear-gradient(
-    135deg,
-    var(--verde),
-    #43d477
-    );
-
-
-    border-radius:35px;
-
-
-    color:white;
-
-
-    text-align:center;
-
-
-    padding:60px 30px;
-
-
-    box-shadow:
-
-    0 20px 50px rgba(31,166,74,.35);
-
-
-}
-
-
-
-
-
-.icono-envio{
-
-
-    font-size:70px;
-
-
-    animation:
-
-    moverCamion 2s infinite alternate;
-
-
-}
-
-
-
-
-
-@keyframes moverCamion{
-
-
-from{
-
-
-transform:translateX(-20px);
-
-
-}
-
-
-to{
-
-
-transform:translateX(20px);
-
-
-}
-
-
-}
-
-
-
-
-
-.envio-box h2{
-
-
-    font-size:40px;
-
-
-    margin:20px 0;
-
-
-}
-
-
-
-
-
-.envio-box p{
-
-
-    font-size:20px;
-
-
-}
-
-
-
-
-
-/* =========================
-       PREGUNTAS
-========================= */
-
-
-.preguntas{
-
-
-    padding:110px 8%;
-
-
-}
-
-
-
-.pregunta{
-
-
-    max-width:900px;
-
-
-    margin:20px auto;
-
-
-    background:white;
-
-
-    border-radius:20px;
-
-
-    overflow:hidden;
-
-
-    box-shadow:
-
-    0 10px 30px rgba(0,0,0,.08);
-
-
-}
-
-
-
-
-
-.pregunta button{
-
-
-    width:100%;
-
-
-    padding:25px;
-
-
-    border:none;
-
-
-    background:white;
-
-
-    cursor:pointer;
-
-
-    text-align:left;
-
-
-    font-size:20px;
-
-
-    font-weight:700;
-
-
-    color:var(--verde);
-
-
-}
-
-
-
-
-
-.pregunta p{
-
-
-    padding:0 25px 25px;
-
-
-    color:#666;
-
-
-    line-height:1.6;
-
-
-}
-
-
-
-
-
-
-/* =========================
-      LIMPIEZA CALIDAD
-========================= */
-
-
-.calidad{
-
-
-    padding:120px 8%;
-
-
-    text-align:center;
-
-
-    background:
-
-    linear-gradient(
-    180deg,
-    #effff4,
-    white
-    );
-
-
-}
-
-
-
-
-
-.calidad-icono{
-
-
-    font-size:90px;
-
-
-    animation:
-
-    flotarLimpieza 3s infinite;
-
-
-}
-
-
-
-
-
-@keyframes flotarLimpieza{
-
-
-0%,100%{
-
-
-transform:translateY(0);
-
-
-}
-
-
-50%{
-
-
-transform:translateY(-20px);
-
-
-}
-
-
-}
-
-
-
-
-
-.calidad h2{
-
-
-    font-size:55px;
-
-
-    color:var(--verde);
-
-
-    margin:25px;
-
-
-}
-
-
-
-
-
-.calidad p{
-
-
-    max-width:850px;
-
-
-    margin:auto;
-
-
-    font-size:22px;
-
-
-    color:#666;
-
-
-    line-height:1.8;
-
-
-}
-
-
-
-
-
-.limpieza-detalles{
-
-
-    display:flex;
-
-
-    justify-content:center;
-
-
-    flex-wrap:wrap;
-
-
-    gap:30px;
-
-
-    margin-top:50px;
-
-
-}
-
-
-
-
-
-.limpieza-detalles div{
-
-
-    background:white;
-
-
-    padding:30px;
-
-
-    width:180px;
-
-
-    border-radius:25px;
-
-
-    font-size:20px;
-
-
-    color:var(--verde);
-
-
-    box-shadow:
-
-    0 15px 30px rgba(0,0,0,.08);
-
-
-}
-/* =========================
-          FOOTER
-========================= */
-
-
-footer{
-
-    background:
-    linear-gradient(
-    135deg,
-    #14833b,
-    #1fa64a
-    );
-
-    color:white;
-
-    text-align:center;
-
-    padding:70px 20px;
-
-}
-
-
-
-.footer-logo{
-
-    font-size:38px;
-
-    font-weight:800;
-
-    margin-bottom:25px;
-
-}
-
-
-
-footer h3{
-
-    font-size:25px;
-
-    margin-bottom:30px;
-
-}
-
-
-
-
-
-.boton-footer{
-
-
-    display:inline-block;
-
-
-    padding:18px 40px;
-
-
-    border-radius:50px;
-
-
-    background:#ff3030;
-
-
-    color:white;
-
-
-    text-decoration:none;
-
-
-    font-size:20px;
-
-
-    font-weight:700;
-
-
-    transition:.35s;
-
-
-}
-
-
-
-
-
-.boton-footer:hover{
-
-
-    transform:
-
-    translateY(-8px);
-
-
-    box-shadow:
-
-    0 15px 35px rgba(255,0,0,.35);
-
-
-}
-
-
-
-
-
-footer p{
-
-
-    margin-top:40px;
-
-
-    opacity:.9;
-
-
-}
-
-
-
-
-
-
-/* =========================
-     WHATSAPP FLOTANTE
-========================= */
-
-
-.whatsapp-flotante{
-
-
-    position:fixed;
-
-
-    right:25px;
-
-
-    bottom:25px;
-
-
-    width:70px;
-
-
-    height:70px;
-
-
-    border-radius:50%;
-
-
-    background:#25D366;
-
-
-    color:white;
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    justify-content:center;
-
-
-    text-decoration:none;
-
-
-    font-size:35px;
-
-
-    z-index:999;
-
-
-    box-shadow:
-
-    0 10px 30px rgba(0,0,0,.25);
-
-
-    animation:
-
-    latido 2s infinite;
-
-
-}
-
-
-
-
-
-@keyframes latido{
-
-
-0%{
-
-transform:scale(1);
-
-}
-
-
-50%{
-
-transform:scale(1.12);
-
-}
-
-
-100%{
-
-transform:scale(1);
-
-}
-
-
-}
-
-
-
-
-
-
-/* =========================
-      ANIMACIONES SCROLL
-========================= */
-
-
-.aparecer{
-
-
-    opacity:0;
-
-
-    transform:
-
-    translateY(50px);
-
-
-    transition:1s;
-
-
-}
-
-
-
-.aparecer.visible{
-
-
-    opacity:1;
-
-
-    transform:
-
-    translateY(0);
-
-
-}
-
-
-
-
-
-
-/* =========================
-      RESPONSIVE TABLET
-========================= */
-
-
-@media(max-width:900px){
-
-
-    nav{
-
-
-        flex-direction:column;
-
-
-        gap:20px;
-
-
-    }
-
-
-
-    nav ul{
-
-
-        flex-wrap:wrap;
-
-
-        justify-content:center;
-
-
-    }
-
-
-
-    .inicio{
-
-
-        flex-direction:column;
-
-
-        text-align:center;
-
-
-    }
-
-
-
-    .inicio-texto h1{
-
-
-        font-size:42px;
-
-
-    }
-
-
-
-    .inicio-imagen{
-
-
-        font-size:100px;
-
-
-    }
-
-
-}
-
-
-
-
-
-
-/* =========================
-      RESPONSIVE CELULAR
-========================= */
-
-
-@media(max-width:600px){
-
-
-
-header{
-
-
-    padding:15px 5%;
-
-
-}
-
-
-
-
-.logo{
-
-
-    font-size:24px;
-
-
-}
-
-
-
-
-nav ul{
-
-
-    gap:15px;
-
-
-}
-
-
-
-nav ul li a{
-
-
-    font-size:14px;
-
-
-}
-
-
-
-.inicio{
-
-
-    padding:130px 5% 60px;
-
-
-}
-
-
-
-.inicio-texto h1{
-
-
-    font-size:32px;
-
-
-}
-
-
-
-.inicio-texto p{
-
-
-    font-size:17px;
-
-
-}
-
-
-
-.boton-principal{
-
-
-    padding:15px 30px;
-
-
-    font-size:17px;
-
-
-}
-
-
-
-
-.porque,
-.productos,
-.opiniones,
-.preguntas,
-.calidad{
-
-
-    padding:80px 5%;
-
-
-}
-
-
-
-
-.porque h2,
-.productos h2,
-.opiniones h2,
-.preguntas h2{
-
-
-    font-size:35px;
-
-
-}
-
-
-
-
-
-.calidad h2{
-
-
-    font-size:38px;
-
-
-}
-
-
-
-.calidad p{
-
-
-    font-size:18px;
-
-
-}
-
-
-
-.limpieza-detalles div{
-
-
-    width:140px;
-
-
-}
-
-
-
-
-.whatsapp-flotante{
-
-
-    width:60px;
-
-
-    height:60px;
-
-
-    font-size:28px;
-
-
-}
-
-
-}
-/* ==========================
-      PANTALLA DE CARGA
-========================== */
-
-
-window.addEventListener("load",()=>{
-
-
-    const loader = document.getElementById("loader");
-
-
-    setTimeout(()=>{
-
-
-        loader.style.opacity="0";
-
-
-        setTimeout(()=>{
-
-
-            loader.style.display="none";
-
-
-        },500);
-
-
-
-    },2000);
-
-
-
-});
-
-
-
-
-
-/* ==========================
-        SIN INTERNET
-========================== */
-
-
-const offline = document.getElementById("offline");
-
-
-
-function revisarConexion(){
-
-
-    if(!navigator.onLine){
-
-
-        offline.style.display="flex";
-
-
-    }else{
-
-
-        offline.style.display="none";
-
-
-    }
-
-
-}
-
-
-
-window.addEventListener(
-"offline",
-revisarConexion
-);
-
-
-
-window.addEventListener(
-"online",
-revisarConexion
-);
-
-
-
-revisarConexion();
-
-
-
-
-
-
-/* ==========================
-      HEADER AL HACER SCROLL
-========================== */
-
-
-const header = document.querySelector("header");
-
-
-
-window.addEventListener("scroll",()=>{
-
-
-    if(window.scrollY > 50){
-
-
-        header.classList.add("scrolled");
-
-
-    }else{
-
-
-        header.classList.remove("scrolled");
-
-
-    }
-
-
-});
-
-
-
-
-
-/* ==========================
-      ANIMACIÓN SCROLL
-========================== */
-
-
-const elementos = document.querySelectorAll(
-".beneficio,.producto,.opinion,.pregunta,.envio-box"
-);
-
-
-
-const mostrarElementos = ()=>{
-
-
-    elementos.forEach(elemento=>{
-
-
-        const posicion =
-        elemento.getBoundingClientRect().top;
-
-
-
-        if(posicion < window.innerHeight - 100){
-
-
-            elemento.classList.add("aparecer");
-
-
-        }
-
-
-
-    });
-
-
-
-};
-
-
-
-window.addEventListener(
-"scroll",
-mostrarElementos
-);
-
-
-
-mostrarElementos();
-
-/* ==========================
-     FILTRO DE PRODUCTOS
-========================== */
-
-
-const botonesCategoria = document.querySelectorAll(".categoria");
-
-const productos = document.querySelectorAll(".producto");
-
-
-
-botonesCategoria.forEach(boton=>{
-
-
-    boton.addEventListener("click",()=>{
-
-
-        // quitar activo
-
-
-        botonesCategoria.forEach(btn=>{
-
-            btn.classList.remove("activo");
-
-        });
-
-
-
-        boton.classList.add("activo");
-
-
-
-        const categoria =
-        boton.dataset.categoria;
-
-
-
-        productos.forEach(producto=>{
-
-
-            const tipo =
-            producto.dataset.tipo;
-
-
-
-            if(
-                categoria === "todos" ||
-                tipo === categoria
-            ){
-
-
-                producto.style.display="block";
-
-
-                setTimeout(()=>{
-
-                    producto.style.animation=
-                    "aparecerProducto .6s";
-
-                },50);
-
-
-
-            }else{
-
-
-                producto.style.display="none";
-
-
-            }
-
-
-
-        });
-
-
-
-    });
-
-
-
-});
-
-
-
-
-
-
-
-/* ==========================
-          BUSCADOR
-========================== */
-
-
-
-const buscador =
-document.getElementById("buscar");
-
-
-
-if(buscador){
-
-
-buscador.addEventListener(
-"keyup",
-()=>{
-
-
-    const texto =
-    buscador.value.toLowerCase();
-
-
-
-    productos.forEach(producto=>{
-
-
-        const nombre =
-        producto
-        .querySelector("h3")
-        .textContent
-        .toLowerCase();
-
-
-
-        if(nombre.includes(texto)){
-
-
-            producto.style.display="block";
-
-
-        }else{
-
-
-            producto.style.display="none";
-
-
-        }
-
-
-
-    });
-
-
-
-});
-
-
-}
-
-
-
-
-
-
-/* ==========================
-     WHATSAPP PRODUCTOS
-========================== */
-
-
-
-const botonesWhatsapp =
-document.querySelectorAll(".whatsapp");
-
-
-
-botonesWhatsapp.forEach(boton=>{
-
-
-    boton.addEventListener("click",(e)=>{
-
-
-        e.preventDefault();
-
-
-
-        const tarjeta =
-        boton.closest(".producto");
-
-
-
-        const nombre =
-        tarjeta.querySelector("h3").textContent;
-
-
-
-        const mensaje =
-        `Hola, me interesa el producto: ${nombre}`;
-
-
-
-        const numero =
-        "5491171005652";
-
-
-
-        const url =
-        `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
-
-
-
-        window.open(
-            url,
-            "_blank"
-        );
-
-
-
-    });
-
-
-
-});
-
-
-
-
-
-
-/* ==========================
-      PREGUNTAS
-========================== */
-
-
-const preguntas =
-document.querySelectorAll(".pregunta");
-
-
-
-preguntas.forEach(pregunta=>{
-
-
-    const boton =
-    pregunta.querySelector("button");
-
-
-
-    const respuesta =
-    pregunta.querySelector("p");
-
-
-
-    respuesta.style.display="none";
-
-
-
-    boton.addEventListener("click",()=>{
-
-
-        if(respuesta.style.display==="none"){
-
-
-            respuesta.style.display="block";
-
-
-        }else{
-
-
-            respuesta.style.display="none";
-
-
-        }
-
-
-
-    });
-
-
-
-});
-
-/* ==========================
-      EFECTO SUAVE AL CARGAR
-========================== */
-
-
-document.body.style.opacity = "0";
-
-
-window.addEventListener("load",()=>{
-
-
-    setTimeout(()=>{
-
-
-        document.body.style.transition="1s";
-
-        document.body.style.opacity="1";
-
-
-    },200);
-
-
-
-});
-
-
-
-
-
-/* ==========================
-      EFECTO PRODUCTOS
-========================== */
-
-
-const tarjetas =
-document.querySelectorAll(".producto");
-
-
-
-tarjetas.forEach(tarjeta=>{
-
-
-    tarjeta.addEventListener(
-    "mouseenter",
-    ()=>{
-
-
-        tarjeta.style.zIndex="5";
-
-
-    });
-
-
-
-    tarjeta.addEventListener(
-    "mouseleave",
-    ()=>{
-
-
-        tarjeta.style.zIndex="1";
-
-
-    });
-
-
-
-});
-
-
-
-
-
-
-/* ==========================
-      MOVIMIENTO DEL MOUSE
-========================== */
-
-
-document.addEventListener(
-"mousemove",
-(e)=>{
-
-
-    const burbujas =
-    document.querySelector(".burbujas");
-
-
-    if(burbujas){
-
-
-        let x =
-        (e.clientX / window.innerWidth) * 10;
-
-
-        let y =
-        (e.clientY / window.innerHeight) * 10;
-
-
-
-        burbujas.style.transform =
-        `translate(${x}px,${y}px)`;
-
-
-    }
-
-
-});
-
-
-
-
-
-
-
-/* ==========================
-       BOTÓN VOLVER ARRIBA
-========================== */
-
-
-const botonArriba =
-document.createElement("button");
-
-
-
-botonArriba.innerHTML="⬆️";
-
-
-botonArriba.className=
-"subir-arriba";
-
-
-
-document.body.appendChild(
-botonArriba
-);
-
-
-
-botonArriba.style.display="none";
-
-
-
-window.addEventListener(
-"scroll",
-()=>{
-
-
-    if(window.scrollY > 600){
-
-
-        botonArriba.style.display="flex";
-
-
-    }else{
-
-
-        botonArriba.style.display="none";
-
-
-    }
-
-
-});
-
-
-
-botonArriba.addEventListener(
-"click",
-()=>{
-
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-
-});
-
-
-
-
-
-
-
-
-/* ==========================
-       ANIMACIÓN DE ICONOS
-========================== */
-
-
-const iconos =
-document.querySelectorAll(
-".beneficio,.calidad-icono"
-);
-
-
-
-iconos.forEach(icono=>{
-
-
-    icono.addEventListener(
-    "mouseenter",
-    ()=>{
-
-
-        icono.style.transform=
-        "scale(1.08)";
-
-
-    });
-
-
-
-    icono.addEventListener(
-    "mouseleave",
-    ()=>{
-
-
-        icono.style.transform=
-        "scale(1)";
-
-
-    });
-
-
-
-});
-
-
-
-
-
-
-
-/* ==========================
-      MENSAJE CONSOLA
-========================== */
-
-
-console.log(
-"🫧 Pérez Limpieza cargado correctamente"
-);
-
-console.log(
-"🧽 Limpieza de calidad activada"
-);
+</html>
