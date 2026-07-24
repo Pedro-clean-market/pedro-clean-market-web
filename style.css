@@ -327,18 +327,76 @@ INICIO
 
 .inicio{
 
+.inicio{
+
 min-height:100vh;
 
-padding:150px 8% 70px;
+padding:150px 8% 80px;
 
 display:flex;
 
 align-items:center;
 
-justify-content:space-between;
+background:
 
-gap:40px;
+linear-gradient(
+rgba(0,0,0,.45),
+rgba(0,0,0,.45)
+),
 
+url("imagenes/fondo-limpieza.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+background-attachment:fixed;
+
+color:white;
+
+}
+
+
+
+.inicio-contenido{
+
+max-width:800px;
+
+animation:entrada 1s ease;
+
+}
+
+
+
+.inicio h1{
+
+font-size:65px;
+
+color:white;
+
+line-height:1.2;
+
+letter-spacing:3px;
+
+text-shadow:
+0 5px 20px black;
+
+}
+
+
+
+.inicio p{
+
+font-size:25px;
+
+margin-top:25px;
+
+color:white;
+
+text-shadow:
+0 3px 10px black;
+
+}
 }
 
 
