@@ -433,11 +433,14 @@ line-height:1.6;
 
 .inicio-iconos{
 
+.inicio-iconos{
+
 font-size:150px;
 
-animation:flotar 3s infinite;
+animation:none;
 
 }
+
 
 
 
@@ -584,11 +587,10 @@ scale(1.03);
 
 font-size:65px;
 
-margin-bottom:20px;
-
-animation:flotar 3s infinite;
+animation:none;
 
 }
+
 
 
 
@@ -1086,7 +1088,7 @@ white
 
 font-size:90px;
 
-animation:flotar 3s infinite;
+animation:none;
 
 }
 
@@ -1395,6 +1397,18 @@ font-size:38px;
 font-size:40px;
 
 }
+/* Quitar movimiento de todos los iconos */
 
+.icono,
+.inicio-iconos,
+.calidad-icono,
+.footer-icono,
+.icono-wsp,
+.pregunta-icono{
+
+animation:none !important;
+
+transform:none !important;
 
 }
+
