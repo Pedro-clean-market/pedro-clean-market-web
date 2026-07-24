@@ -327,8 +327,6 @@ INICIO
 
 .inicio{
 
-.inicio{
-
 min-height:100vh;
 
 padding:150px 8% 80px;
@@ -397,7 +395,6 @@ text-shadow:
 0 3px 10px black;
 
 }
-}
 
 
 
@@ -430,8 +427,6 @@ line-height:1.6;
 }
 
 
-
-.inicio-iconos{
 
 .inicio-iconos{
 
@@ -1410,5 +1405,25 @@ animation:none !important;
 
 transform:none !important;
 
+}/* ARREGLO DE POSICIÓN GENERAL */
+
+html, body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+
+.inicio{
+    width:100%;
+}
+
+
+.inicio-contenido{
+    max-width:900px;
+}
+
+
+img{
+    max-width:100%;
 }
 
