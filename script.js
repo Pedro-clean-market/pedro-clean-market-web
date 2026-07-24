@@ -1,454 +1,160 @@
-// ======================
-// PANTALLA DE CARGA
-// ======================
+/* ===================================
+   PEDRO CLEAN MARKET
+   SCRIPT.JS - PARTE 1
+=================================== */
 
+/* FILTRO DE PRODUCTOS */
 
-window.addEventListener("load",()=>{
+const botones = document.querySelectorAll(".categoria");
+const productos = document.querySelectorAll(".producto");
 
-setTimeout(()=>{
+botones.forEach(boton => {
 
-document.getElementById("loader").style.display="none";
+    boton.addEventListener("click", () => {
 
-},2500);
+        botones.forEach(btn => btn.classList.remove("activo"));
+        boton.classList.add("activo");
 
+        const categoria = boton.dataset.categoria;
+
+        productos.forEach(producto => {
+
+            if (
+                categoria === "todos" ||
+                producto.dataset.categoria === categoria
+            ) {
+
+                producto.style.display = "block";
+
+            } else {
+
+                producto.style.display = "none";
+
+            }
+
+        });
+
+    });
 
 });
 
 
+/* BOTONES DE WHATSAPP */
 
+const botonesWhatsapp = document.querySelectorAll(".whatsapp");
 
+botonesWhatsapp.forEach(boton => {
 
+    boton.addEventListener("click", function(e){
 
-// ======================
-// SIN INTERNET
-// ======================
+        e.preventDefault();
 
+        const producto = this.dataset.producto;
 
-const offline =
-document.getElementById("offline");
+        const numero = "5491171005652";
 
+        const mensaje =
+        `Hola 👋, me interesa el producto: ${producto}`;
 
-function revisarConexion(){
+        window.open(
 
+        `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`,
 
-if(!navigator.onLine){
+        "_blank"
 
-offline.style.display="flex";
+        );
 
+    });
 
-}else{
+});/* ===================================
+   PEDRO CLEAN MARKET
+   SCRIPT.JS - PARTE 2
+=================================== */
 
+/* EFECTO AL HACER SCROLL */
 
-offline.style.display="none";
-
-
-}
-
-
-}
-
-
-
-window.addEventListener(
-"offline",
-revisarConexion
+const elementos = document.querySelectorAll(
+".beneficio, .producto"
 );
 
+const observer = new IntersectionObserver((entradas)=>{
 
+    entradas.forEach((entrada)=>{
 
-window.addEventListener(
-"online",
-revisarConexion
-);
+        if(entrada.isIntersecting){
 
+            entrada.target.classList.add("visible");
 
+        }
 
-revisarConexion();
+    });
 
+},{
+    threshold:0.15
+});
 
+elementos.forEach((elemento)=>{
 
+    elemento.classList.add("oculto");
 
-
-
-
-
-
-// ======================
-// FILTRO PRODUCTOS
-// ======================
-
-
-const botones =
-document.querySelectorAll(".categoria");
-
-
-const productos =
-document.querySelectorAll(".producto");
-
-
-
-botones.forEach(boton=>{
-
-
-boton.addEventListener("click",()=>{
-
-
-botones.forEach(b=>{
-
-b.classList.remove("activo");
+    observer.observe(elemento);
 
 });
 
 
-boton.classList.add("activo");
+/* HEADER */
 
+const header = document.querySelector("header");
 
+window.addEventListener("scroll",()=>{
 
-let categoria =
-boton.dataset.cat;
+    if(window.scrollY > 50){
 
+        header.style.boxShadow =
+        "0 10px 30px rgba(0,0,0,.10)";
 
+    }else{
 
-productos.forEach(producto=>{
+        header.style.boxShadow =
+        "0 2px 10px rgba(0,0,0,.08)";
 
-
-let tipo =
-producto.dataset.tipo;
-
-
-
-if(
-categoria==="todos" ||
-tipo===categoria
-){
-
-
-producto.style.display="block";
-
-
-}else{
-
-
-producto.style.display="none";
-
-
-}
-
-
+    }
 
 });
 
 
-});
+/* BOTÓN SUBIR */
 
+const subir = document.createElement("button");
 
-});
+subir.innerHTML = "⬆";
 
+subir.className = "subir";
 
+document.body.appendChild(subir);
 
+window.addEventListener("scroll",()=>{
 
+    if(window.scrollY > 500){
 
+        subir.style.display="flex";
 
+    }else{
 
+        subir.style.display="none";
 
-
-// ======================
-// WHATSAPP PRODUCTOS
-// ======================
-
-
-const consultar =
-document.querySelectorAll(".consultar");
-
-
-
-consultar.forEach(boton=>{
-
-
-boton.addEventListener("click",()=>{
-
-
-let producto =
-boton.parentElement.querySelector("h3").innerText;
-
-
-
-let mensaje =
-"Hola Pedro Clean, me interesa el producto: "
-+
-producto;
-
-
-
-let numero =
-"5491171005652";
-
-
-
-window.open(
-
-"https://wa.me/"
-+
-numero
-+
-"?text="
-+
-encodeURIComponent(mensaje),
-
-"_blank"
-
-);
-
-
+    }
 
 });
 
+subir.addEventListener("click",()=>{
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
 
 });
-
-
-
-
-
-
-
-
-// ======================
-// SISTEMA DE ESTRELLAS
-// ======================
-
-
-const estrellas =
-document.querySelectorAll(".estrellas span");
-
-
-let puntuacion = 0;
-
-
-
-estrellas.forEach(estrella=>{
-
-
-estrella.addEventListener("click",()=>{
-
-
-puntuacion =
-estrella.dataset.star;
-
-
-
-estrellas.forEach(e=>{
-
-
-if(e.dataset.star<=puntuacion){
-
-e.innerHTML="★";
-
-
-}else{
-
-
-e.innerHTML="☆";
-
-
-}
-
-
-});
-
-
-});
-
-
-});
-
-
-
-
-
-
-
-
-
-// ======================
-// CREAR OPINIONES
-// ======================
-
-
-const botonOpinion =
-document.getElementById("enviar-opinion");
-
-
-botonOpinion.addEventListener("click",()=>{
-
-
-let comentario =
-document.getElementById("comentario").value;
-
-
-
-if(puntuacion==0){
-
-
-alert("Elegí una cantidad de estrellas");
-
-
-return;
-
-
-}
-
-
-
-
-if(comentario.trim()==""){
-
-
-alert("Escribí un comentario");
-
-
-return;
-
-
-}
-
-
-
-
-let caja =
-document.createElement("div");
-
-
-caja.className="opinion-usuario";
-
-
-
-caja.innerHTML=`
-
-<h3>
-${"★".repeat(puntuacion)}
-</h3>
-
-<p>
-${comentario}
-</p>
-
-`;
-
-
-
-
-document
-.getElementById("lista-opiniones")
-.appendChild(caja);
-
-
-
-
-document.getElementById("comentario").value="";
-
-
-
-puntuacion=0;
-
-
-
-estrellas.forEach(e=>{
-
-e.innerHTML="☆";
-
-});
-
-
-
-});
-
-
-
-
-
-
-
-
-
-
-// ======================
-// ANIMACIONES AL SCROLL
-// ======================
-
-
-const elementos =
-document.querySelectorAll(
-".tarjeta,.producto,.pregunta,.calidad-items div"
-);
-
-
-
-elementos.forEach(elemento=>{
-
-
-elemento.style.opacity="0";
-
-elemento.style.transform=
-"translateY(50px)";
-
-elemento.style.transition=
-"1s";
-
-
-});
-
-
-
-
-
-function aparecer(){
-
-
-elementos.forEach(elemento=>{
-
-
-let posicion =
-elemento.getBoundingClientRect().top;
-
-
-
-if(posicion <
-window.innerHeight-100){
-
-
-elemento.style.opacity="1";
-
-elemento.style.transform=
-"translateY(0)";
-
-
-}
-
-
-
-});
-
-
-}
-
-
-
-window.addEventListener(
-"scroll",
-aparecer
-);
-
-
-aparecer();
-
-
-
-
-
-
-
-
-console.log(
-"🧽 Pedro Clean iniciado correctamente"
-);
