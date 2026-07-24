@@ -69,11 +69,10 @@ nav a:hover{
 /* PORTADA */
 
 .inicio{
-   .inicio{
 
     min-height:100vh;
 
-    padding:150px 8% 80px;
+    padding:140px 5% 80px;
 
     display:flex;
 
@@ -98,7 +97,6 @@ nav a:hover{
 
     background-repeat:no-repeat;
 
-}
 }
 
 /* Logo de fondo */
@@ -126,11 +124,11 @@ nav a:hover{
 
 }
 .inicio-texto{
+    max-width:850px;
+
     position:relative;
 
     z-index:2;
-
-    max-width:850px;
 
 }
 
