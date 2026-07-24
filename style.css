@@ -1425,5 +1425,42 @@ html, body{
 
 img{
     max-width:100%;
+}/* ARREGLO DEFINITIVO DE CENTRADO */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+}
+
+
+header{
+    width:100%;
+}
+
+
+.inicio{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+}
+
+
+.inicio-contenido{
+    width:100%;
+    max-width:900px;
+}
+
+
+img{
+    max-width:100%;
 }
 
