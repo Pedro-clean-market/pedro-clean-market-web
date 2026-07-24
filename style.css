@@ -69,14 +69,36 @@ nav a:hover{
 /* PORTADA */
 
 .inicio{
+   .inicio{
+
     min-height:100vh;
-    padding:140px 8% 80px;
+
+    padding:150px 8% 80px;
+
     display:flex;
-    justify-content:center;
+
     align-items:center;
+
+    justify-content:center;
+
     text-align:center;
+
     position:relative;
-    overflow:hidden;
+
+    background-image:
+    linear-gradient(
+    rgba(255,255,255,.75),
+    rgba(255,255,255,.75)
+    ),
+    url("imagenes/fondo.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
 }
 
 /* Logo de fondo */
