@@ -81,18 +81,33 @@ nav a:hover{
 
 /* Logo de fondo */
 .fondo-logo{
-    position:absolute;
-    inset:0;
-    background:url("imagenes/logo.png") center center no-repeat;
-    background-size:420px;
-    opacity:.08;
-    z-index:0;
-}
 
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:500px;
+    height:500px;
+
+    background:url("imagenes/logo.png") center no-repeat;
+
+    background-size:contain;
+
+    opacity:0.18;
+
+    z-index:0;
+
+}
 .inicio-texto{
     position:relative;
-    z-index:1;
+
+    z-index:2;
+
     max-width:850px;
+
 }
 
 .inicio h1{
