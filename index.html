@@ -8,878 +8,162 @@
 
 <title>Pérez Limpieza | Limpieza de Calidad</title>
 
-<style>
+<link rel="stylesheet" href="style.css">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
-}
+</head>
 
 
-html{
-scroll-behavior:smooth;
-}
+<body>
 
 
-body{
+<!-- CARGA -->
 
-background:linear-gradient(
-180deg,
-#ffffff,
-#eaffef
-);
+<div id="loader">
 
-color:#222;
+<div class="loader-contenido">
 
-overflow-x:hidden;
+<div class="esponja">
+🧽
+</div>
 
-}
+<h2>
+Cargando<span></span>
+</h2>
 
+</div>
 
-:root{
+</div>
 
---verde:#1fa64a;
---verdeoscuro:#117a34;
---rojo:#ff3030;
 
-}
 
 
+<!-- SIN INTERNET -->
 
-/* ===== CARGANDO ===== */
+<div id="offline">
 
+<div>
 
-#loader{
+<div class="escoba">
+🧹
+</div>
 
-position:fixed;
+<h2>
+Buscando la señal...
+</h2>
 
-width:100%;
-height:100%;
+<p>
+No hay conexión a internet
+</p>
 
-background:white;
+</div>
 
-display:flex;
+</div>
 
-align-items:center;
 
-justify-content:center;
 
-z-index:9999;
 
-}
 
+<header>
 
-.loader-box{
 
-text-align:center;
+<div class="logo">
 
-}
+🫧 Pérez Limpieza
 
+</div>
 
-.esponja{
 
-font-size:100px;
+<nav>
 
-animation:lavar 2s infinite;
+<a href="#inicio">
+Inicio
+</a>
 
-}
+<a href="#porque">
+Elegirnos
+</a>
 
+<a href="#productos">
+Productos
+</a>
 
-@keyframes lavar{
+<a href="#contacto">
+Contacto
+</a>
 
-0%{
-transform:translateX(-60px) rotate(-20deg);
-}
 
-50%{
-transform:translateX(60px) rotate(20deg);
-}
+</nav>
 
-100%{
-transform:translateX(-60px) rotate(-20deg);
-}
 
-}
+</header>
 
 
 
-.loader-box h2{
 
-color:var(--verde);
 
-font-size:35px;
 
-margin-top:20px;
+<section class="inicio" id="inicio">
 
-}
 
+<div>
 
-.loader-box span:after{
 
-content:"";
+<h1>
 
-animation:puntos 1.5s infinite;
+Productos de limpieza de calidad profesional 🧴
 
-}
+</h1>
 
 
-@keyframes puntos{
+<p>
 
-0%{content:"";}
+Soluciones para hogares, comercios y empresas.
 
-33%{content:".";}
+</p>
 
 
-66%{content:"..";}
+<a class="boton" href="#productos">
 
+Ver productos
 
-100%{content:"...";}
+</a>
 
-}
 
+</div>
 
 
 
-/* ===== SIN INTERNET ===== */
+<div class="imagen-inicio">
 
+🧴🫧🧽
 
-#offline{
+</div>
 
-display:none;
 
-position:fixed;
 
-width:100%;
-height:100%;
+</section>
 
-background:white;
 
-z-index:9998;
 
-align-items:center;
 
-justify-content:center;
 
-}
 
+<section id="porque" class="seccion">
 
 
-.offline-box{
+<h2>
 
-text-align:center;
+✨ ¿Por qué elegirnos?
 
-}
-
-
-
-.escoba{
-
-font-size:100px;
-
-animation:barrer 2s infinite alternate;
-
-}
-
-
-@keyframes barrer{
-
-from{
-transform:translateX(-80px);
-}
-
-to{
-transform:translateX(80px);
-}
-
-}
-
-
-
-.offline-box h2{
-
-color:var(--verde);
-
-font-size:35px;
-
-}
-
-
-
-
-/* ===== BURBUJAS ===== */
-
-
-.burbujas{
-
-position:fixed;
-
-width:100%;
-height:100%;
-
-z-index:-1;
-
-}
-
-
-.burbujas span{
-
-position:absolute;
-
-bottom:-100px;
-
-width:35px;
-
-height:35px;
-
-background:#1fa64a40;
-
-border-radius:50%;
-
-animation:subir 15s infinite;
-
-}
-
-
-
-.burbujas span:nth-child(1){
-
-left:10%;
-
-}
-
-
-.burbujas span:nth-child(2){
-
-left:35%;
-
-animation-duration:20s;
-
-}
-
-
-
-.burbujas span:nth-child(3){
-
-left:60%;
-
-width:50px;
-
-height:50px;
-
-animation-duration:25s;
-
-}
-
-
-
-.burbujas span:nth-child(4){
-
-left:80%;
-
-}
-
-
-
-.burbujas span:nth-child(5){
-
-left:90%;
-
-}
-
-
-
-
-@keyframes subir{
-
-to{
-
-transform:translateY(-120vh);
-
-opacity:0;
-
-}
-
-}
-
-
-
-
-
-
-/* ===== HEADER ===== */
-
-
-header{
-
-position:fixed;
-
-top:0;
-
-width:100%;
-
-padding:20px 8%;
-
-background:#ffffffdd;
-
-backdrop-filter:blur(10px);
-
-z-index:1000;
-
-box-shadow:0 5px 20px #0002;
-
-}
-
-
-
-nav{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-}
-
-
-
-.logo{
-
-font-size:30px;
-
-font-weight:bold;
-
-color:var(--verde);
-
-}
-
-
-
-nav ul{
-
-display:flex;
-
-gap:25px;
-
-list-style:none;
-
-}
-
-
-nav a{
-
-text-decoration:none;
-
-color:#333;
-
-font-weight:bold;
-
-}
-
-
-nav a:hover{
-
-color:var(--verde);
-
-}
-
-
-
-/* ===== INICIO ===== */
-
-
-.inicio{
-
-min-height:100vh;
-
-padding:150px 8% 50px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-}
-
-
-.inicio h1{
-
-font-size:55px;
-
-color:var(--verde);
-
-max-width:700px;
-
-}
-
-
-.inicio p{
-
-font-size:22px;
-
-color:#666;
-
-margin-top:25px;
-
-}
-
-
-.iconos{
-
-font-size:130px;
-
-animation:flotar 3s infinite;
-
-}
-
-
-@keyframes flotar{
-
-50%{
-
-transform:translateY(-20px);
-
-}
-
-}
-
-
-.boton{
-
-display:inline-block;
-
-margin-top:30px;
-
-background:var(--verde);
-
-color:white;
-
-padding:18px 40px;
-
-border-radius:50px;
-
-text-decoration:none;
-
-font-weight:bold;
-
-}
-
-
-
-.boton:hover{
-
-transform:scale(1.1);
-
-}
-
-/* ===== PORQUE ELEGIRNOS ===== */
-
-
-.seccion{
-
-padding:100px 8%;
-
-}
-
-
-.titulo{
-
-text-align:center;
-
-font-size:45px;
-
-color:var(--verde);
-
-margin-bottom:50px;
-
-}
-
-
-
-.beneficios{
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(250px,1fr));
-
-gap:30px;
-
-}
-
-
-
-.beneficio{
-
-background:white;
-
-padding:35px;
-
-border-radius:25px;
-
-text-align:center;
-
-box-shadow:0 15px 35px #0002;
-
-transition:.4s;
-
-}
-
-
-
-.beneficio:hover{
-
-transform:translateY(-15px);
-
-}
-
-
-
-.beneficio .icono{
-
-font-size:60px;
-
-}
-
-
-
-.beneficio h3{
-
-color:var(--verde);
-
-font-size:25px;
-
-margin:20px 0;
-
-}
-
-
-
-.beneficio p{
-
-color:#666;
-
-}
-
-
-
-
-
-/* ===== PRODUCTOS ===== */
-
-
-.productos{
-
-padding:100px 8%;
-
-background:#f3fff7;
-
-}
-
-
-
-.categorias{
-
-display:flex;
-
-justify-content:center;
-
-flex-wrap:wrap;
-
-gap:15px;
-
-margin-bottom:50px;
-
-}
-
-
-
-.categoria{
-
-border:none;
-
-padding:15px 30px;
-
-border-radius:50px;
-
-background:white;
-
-cursor:pointer;
-
-font-size:17px;
-
-font-weight:bold;
-
-box-shadow:0 10px 25px #0002;
-
-transition:.3s;
-
-}
-
-
-
-.categoria:hover,
-.categoria.activo{
-
-background:var(--verde);
-
-color:white;
-
-}
-
-
-
-.lista-productos{
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(260px,1fr));
-
-gap:35px;
-
-}
-
-
-
-
-.producto{
-
-background:white;
-
-border-radius:25px;
-
-overflow:hidden;
-
-box-shadow:0 15px 35px #0002;
-
-transition:.4s;
-
-padding-bottom:25px;
-
-}
-
-
-
-.producto:hover{
-
-transform:translateY(-12px);
-
-}
-
-
-
-.producto img{
-
-width:100%;
-
-height:250px;
-
-object-fit:contain;
-
-background:#eaffef;
-
-}
-
-
-
-.producto h3{
-
-text-align:center;
-
-color:var(--verde);
-
-font-size:24px;
-
-padding:20px;
-
-}
-
-
-
-.producto p{
-
-text-align:center;
-
-color:#666;
-
-padding:0 20px 20px;
-
-}
-
-
-
-.consultar{
-
-display:block;
-
-width:80%;
-
-margin:auto;
-
-background:var(--rojo);
-
-color:white;
-
-text-decoration:none;
-
-text-align:center;
-
-padding:15px;
-
-border-radius:50px;
-
-font-weight:bold;
-
-transition:.3s;
-
-}
-
-
-
-.consultar:hover{
-
-transform:scale(1.05);
-
-}
-
-
-
-
-
-/* ===== OPINIONES ===== */
-
-
-.opiniones{
-
-padding:100px 8%;
-
-}
-
-
-
-.tarjetas-opinion{
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(260px,1fr));
-
-gap:30px;
-
-}
-
-
-
-.opinion{
-
-background:white;
-
-padding:30px;
-
-border-radius:25px;
-
-text-align:center;
-
-box-shadow:0 15px 30px #0002;
-
-}
-
-
-
-.estrellas{
-
-font-size:30px;
-
-color:#ffc400;
-
-}
-
-
-
-.opinion p{
-
-color:#666;
-
-margin:20px;
-
-}
-
-
-
-
-/* ===== ENVIO ===== */
-
-
-.envios{
-
-padding:80px 8%;
-
-}
-
-
-
-.envio-box{
-
-background:var(--verde);
-
-color:white;
-
-border-radius:30px;
-
-padding:50px;
-
-text-align:center;
-
-}
-
-
-
-.camion{
-
-font-size:70px;
-
-animation:mover 2s infinite alternate;
-
-}
-
-
-@keyframes mover{
-
-from{
-
-transform:translateX(-20px);
-
-}
-
-to{
-
-transform:translateX(20px);
-
-}
-
-}
-<!-- ===== CONTENIDO ===== -->
-
-
-<section class="seccion">
-
-<h2 class="titulo">
-✨ ¿Por qué elegir Pérez Limpieza?
 </h2>
 
 
-<div class="beneficios">
+<div class="tarjetas">
 
 
-<div class="beneficio">
+<div class="tarjeta">
 
-<div class="icono">
 🧽
-</div>
 
 <h3>
 Calidad
@@ -893,11 +177,9 @@ Productos seleccionados para una limpieza efectiva.
 
 
 
-<div class="beneficio">
+<div class="tarjeta">
 
-<div class="icono">
 🧴
-</div>
 
 <h3>
 Rendimiento
@@ -911,11 +193,9 @@ Productos concentrados que duran más.
 
 
 
-<div class="beneficio">
+<div class="tarjeta">
 
-<div class="icono">
 🚚
-</div>
 
 <h3>
 Rapidez
@@ -929,18 +209,16 @@ Atención rápida y personalizada.
 
 
 
-<div class="beneficio">
+<div class="tarjeta">
 
-<div class="icono">
 ⭐
-</div>
 
 <h3>
 Confianza
 </h3>
 
 <p>
-Clientes satisfechos con nuestros productos.
+Clientes satisfechos.
 </p>
 
 </div>
@@ -948,44 +226,45 @@ Clientes satisfechos con nuestros productos.
 
 </div>
 
+
 </section>
 
 
 
 
 
-<section class="productos" id="productos">
+
+<section id="productos" class="productos">
 
 
-<h2 class="titulo">
+<h2>
 🧺 Nuestros Productos
 </h2>
 
 
 <div class="categorias">
 
-
-<button class="categoria activo">
+<button>
 🧴 Todos
 </button>
 
-<button class="categoria">
+<button>
 🪣 Pisos
 </button>
 
-<button class="categoria">
+<button>
 👕 Ropa
 </button>
 
-<button class="categoria">
+<button>
 🍽 Cocina
 </button>
 
-<button class="categoria">
+<button>
 🧼 Manos
 </button>
 
-<button class="categoria">
+<button>
 🗑 Bolsas
 </button>
 
@@ -994,28 +273,31 @@ Clientes satisfechos con nuestros productos.
 
 
 
+<div class="productos-grid">
 
-<div class="lista-productos">
 
 
 
 <div class="producto">
 
+
 <img src="imagenes/detergente.png">
+
 
 <h3>
 Detergente 12% Amarillo
 </h3>
 
+
 <p>
 Limpieza profunda para cocina.
 </p>
 
-<a class="consultar"
-href="https://wa.me/5491171005652"
-target="_blank">
-💬 Consultar
+
+<a class="whatsapp">
+Consultar
 </a>
+
 
 </div>
 
@@ -1025,21 +307,24 @@ target="_blank">
 
 <div class="producto">
 
+
 <img src="imagenes/jabon-ropa.png">
+
 
 <h3>
 Jabón líquido para ropa 15%
 </h3>
 
+
 <p>
 Baja espuma y gran rendimiento.
 </p>
 
-<a class="consultar"
-href="https://wa.me/5491171005652"
-target="_blank">
-💬 Consultar
+
+<a class="whatsapp">
+Consultar
 </a>
+
 
 </div>
 
@@ -1049,45 +334,50 @@ target="_blank">
 
 <div class="producto">
 
+
 <img src="imagenes/suavizante.png">
+
 
 <h3>
 Suavizante Triple Perfume
 </h3>
 
+
 <p>
 Aroma fresco y duradero.
 </p>
 
-<a class="consultar"
-href="https://wa.me/5491171005652"
-target="_blank">
-💬 Consultar
+
+<a class="whatsapp">
+Consultar
 </a>
+
 
 </div>
 
 
 
 
-
 <div class="producto">
 
+
 <img src="imagenes/desengrasante.png">
+
 
 <h3>
 Desengrasante Multiuso
 </h3>
 
+
 <p>
-Para suciedad difícil.
+Elimina suciedad difícil y grasa.
 </p>
 
-<a class="consultar"
-href="https://wa.me/5491171005652"
-target="_blank">
-💬 Consultar
+
+<a class="whatsapp">
+Consultar
 </a>
+
 
 </div>
 
@@ -1095,25 +385,30 @@ target="_blank">
 
 
 
+
 <div class="producto">
 
+
 <img src="imagenes/jabon-manos.png">
+
 
 <h3>
 Jabón líquido para manos
 </h3>
 
+
 <p>
 Limpieza y cuidado diario.
 </p>
 
-<a class="consultar"
-href="https://wa.me/5491171005652"
-target="_blank">
-💬 Consultar
+
+<a class="whatsapp">
+Consultar
 </a>
 
+
 </div>
+
 
 
 
@@ -1121,23 +416,28 @@ target="_blank">
 
 <div class="producto">
 
+
 <img src="imagenes/bolsas.png">
+
 
 <h3>
 Bolsas de residuos
 </h3>
 
+
 <p>
 Resistentes y prácticas.
 </p>
 
-<a class="consultar"
-href="https://wa.me/5491171005652"
-target="_blank">
-💬 Consultar
+
+<a class="whatsapp">
+Consultar
 </a>
 
+
 </div>
+
+
 
 
 </div>
@@ -1151,110 +451,61 @@ target="_blank">
 
 
 
-<section class="opiniones">
 
-
-<h2 class="titulo">
-⭐ Opiniones de clientes
-</h2>
-
-
-<div class="tarjetas-opinion">
-
-
-<div class="opinion">
-
-<div class="estrellas">
-★★★★★
-</div>
-
-<p>
-"Excelentes productos y muy buena atención."
-</p>
-
-</div>
-
-
-<div class="opinion">
-
-<div class="estrellas">
-★★★★★
-</div>
-
-<p>
-"Muy buen aroma y duran mucho."
-</p>
-
-</div>
-
-
-<div class="opinion">
-
-<div class="estrellas">
-★★★★★
-</div>
-
-<p>
-"Siempre compro porque tienen buena calidad."
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-
-
-
-
-<section class="envios">
-
-
-<div class="envio-box">
-
-
-<div class="camion">
-🚚
-</div>
-
-
-<h2>
-Envíos y atención rápida
-</h2>
-
-
-<p>
-Consultá por WhatsApp y realizá tu pedido fácilmente.
-</p>
-
-
-</div>
-
-</section>
-
-
-
-
-
+<!-- OPINIONES -->
 
 
 <section class="seccion">
 
 
-<h2 class="titulo">
-🧽 Limpieza de Calidad
+<h2>
+⭐ Opiniones de clientes
 </h2>
 
 
-<p style="text-align:center;font-size:22px;color:#666">
 
-En Pérez Limpieza trabajamos para ofrecer productos confiables, eficientes y con gran rendimiento.
+<div class="tarjetas">
 
+
+<div class="tarjeta">
+
+⭐️⭐️⭐️⭐️⭐️
+
+<p>
+"Excelente calidad, los productos rinden muchísimo."
 </p>
+
+</div>
+
+
+
+
+<div class="tarjeta">
+
+⭐️⭐️⭐️⭐️⭐️
+
+<p>
+"Buen aroma y muy buena atención."
+</p>
+
+</div>
+
+
+
+
+<div class="tarjeta">
+
+⭐️⭐️⭐️⭐️⭐️
+
+<p>
+"Siempre compro porque son confiables."
+</p>
+
+</div>
+
+
+
+</div>
 
 
 </section>
@@ -1265,7 +516,143 @@ En Pérez Limpieza trabajamos para ofrecer productos confiables, eficientes y co
 
 
 
-<footer>
+
+<!-- PREGUNTAS -->
+
+
+<section class="seccion">
+
+
+<h2>
+❓ Preguntas frecuentes
+</h2>
+
+
+
+<div class="pregunta">
+
+<h3>
+🧴 ¿Qué productos venden?
+</h3>
+
+<p>
+Productos para pisos, ropa, cocina, manos y bolsas.
+</p>
+
+</div>
+
+
+
+
+<div class="pregunta">
+
+<h3>
+🫧 ¿Son productos concentrados?
+</h3>
+
+<p>
+Sí, tienen excelente rendimiento.
+</p>
+
+</div>
+
+
+
+
+<div class="pregunta">
+
+<h3>
+📱 ¿Cómo puedo comprar?
+</h3>
+
+<p>
+Podés consultar directamente por WhatsApp.
+</p>
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- CALIDAD -->
+
+
+<section class="calidad">
+
+
+<div class="calidad-icono">
+
+🧽🫧
+
+</div>
+
+
+
+<h2>
+
+Limpieza de Calidad
+
+</h2>
+
+
+
+<p>
+
+En Pérez Limpieza trabajamos para ofrecer productos confiables, eficientes y con gran rendimiento para que cada espacio quede impecable.
+
+</p>
+
+
+
+<div class="calidad-items">
+
+
+<div>
+✨
+<br>
+Calidad
+</div>
+
+
+<div>
+🧴
+<br>
+Rendimiento
+</div>
+
+
+<div>
+🌿
+<br>
+Frescura
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- CONTACTO -->
+
+
+<footer id="contacto">
 
 
 <h2>
@@ -1273,24 +660,31 @@ En Pérez Limpieza trabajamos para ofrecer productos confiables, eficientes y co
 </h2>
 
 
+
 <p>
-Productos de limpieza de calidad profesional.
+Productos de limpieza profesionales
 </p>
 
 
-<a class="boton"
-href="https://wa.me/5491171005652"
-target="_blank">
 
-💬 Consultar WhatsApp
+<a 
+href="https://wa.me/5491171005652"
+target="_blank"
+class="boton-footer">
+
+💬 Consultar por WhatsApp
 
 </a>
 
 
-<br><br>
+
+<p>
+
+© 2026 Pérez Limpieza - Limpieza de calidad
+
+</p>
 
 
-© 2026 Pérez Limpieza
 
 </footer>
 
@@ -1298,9 +692,11 @@ target="_blank">
 
 
 
-<a class="whatsapp-flotante"
+
+<a 
 href="https://wa.me/5491171005652"
-target="_blank">
+target="_blank"
+class="whatsapp-flotante">
 
 💬
 
@@ -1309,48 +705,7 @@ target="_blank">
 
 
 
-
-<script>
-
-
-// Pantalla de carga
-
-window.addEventListener("load",()=>{
-
-setTimeout(()=>{
-
-document.getElementById("loader").style.display="none";
-
-},2000);
-
-});
-
-
-
-
-// Sin internet
-
-let offline =
-document.getElementById("offline");
-
-
-window.addEventListener("offline",()=>{
-
-offline.style.display="flex";
-
-});
-
-
-window.addEventListener("online",()=>{
-
-offline.style.display="none";
-
-});
-
-
-
-</script>
-
+<script src="script.js"></script>
 
 
 </body>
