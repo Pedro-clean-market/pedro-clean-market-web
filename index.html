@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pérez Limpieza | Limpieza de Calidad</title>
+<title>Pedro Clean | Limpieza de Calidad</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -16,21 +16,21 @@
 <body>
 
 
-<!-- CARGA -->
+<!-- PANTALLA DE CARGA -->
 
 <div id="loader">
 
-<div class="loader-contenido">
+    <div class="loader-box">
 
-<div class="esponja">
-🧽
-</div>
+        <div class="esponja">
+            🧽
+        </div>
 
-<h2>
-Cargando<span></span>
-</h2>
+        <h2>
+            Limpiando tu experiencia<span></span>
+        </h2>
 
-</div>
+    </div>
 
 </div>
 
@@ -41,21 +41,21 @@ Cargando<span></span>
 
 <div id="offline">
 
-<div>
+    <div class="offline-box">
 
-<div class="escoba">
-🧹
-</div>
+        <div class="escoba">
+            🧹
+        </div>
 
-<h2>
-Buscando la señal...
-</h2>
+        <h2>
+            Buscando la señal...
+        </h2>
 
-<p>
-No hay conexión a internet
-</p>
+        <p>
+            Parece que no hay conexión
+        </p>
 
-</div>
+    </div>
 
 </div>
 
@@ -65,10 +65,9 @@ No hay conexión a internet
 
 <header>
 
-
 <div class="logo">
 
-🫧 Pérez Limpieza
+🫧 Pedro Clean
 
 </div>
 
@@ -87,6 +86,10 @@ Elegirnos
 Productos
 </a>
 
+<a href="#opiniones">
+Opiniones
+</a>
+
 <a href="#contacto">
 Contacto
 </a>
@@ -102,27 +105,29 @@ Contacto
 
 
 
+<!-- INICIO -->
+
 <section class="inicio" id="inicio">
 
 
-<div>
+<div class="inicio-texto">
 
 
 <h1>
 
-Productos de limpieza de calidad profesional 🧴
+🧴 Productos de limpieza profesionales
 
 </h1>
 
 
 <p>
 
-Soluciones para hogares, comercios y empresas.
+La solución inteligente para mantener cada espacio impecable.
 
 </p>
 
 
-<a class="boton" href="#productos">
+<a href="#productos" class="boton-principal">
 
 Ver productos
 
@@ -133,12 +138,11 @@ Ver productos
 
 
 
-<div class="imagen-inicio">
+<div class="inicio-iconos">
 
-🧴🫧🧽
+🧽🫧🧴
 
 </div>
-
 
 
 </section>
@@ -148,14 +152,20 @@ Ver productos
 
 
 
-<section id="porque" class="seccion">
+
+
+<!-- POR QUE ELEGIRNOS -->
+
+
+<section class="seccion" id="porque">
 
 
 <h2>
 
-✨ ¿Por qué elegirnos?
+✨ ¿Por qué elegir Pedro Clean?
 
 </h2>
+
 
 
 <div class="tarjetas">
@@ -163,65 +173,117 @@ Ver productos
 
 <div class="tarjeta">
 
+<div class="icono">
+
 🧽
 
+</div>
+
+
 <h3>
-Calidad
+Calidad superior
 </h3>
 
+
 <p>
-Productos seleccionados para una limpieza efectiva.
+
+Productos pensados para una limpieza profunda.
+
 </p>
+
 
 </div>
 
 
 
+
+
 <div class="tarjeta">
+
+
+<div class="icono">
 
 🧴
 
+</div>
+
+
 <h3>
-Rendimiento
+
+Gran rendimiento
+
 </h3>
 
+
 <p>
-Productos concentrados que duran más.
+
+Fórmulas concentradas que duran más.
+
 </p>
+
 
 </div>
 
 
 
+
+
 <div class="tarjeta">
+
+
+<div class="icono">
 
 🚚
 
+</div>
+
+
 <h3>
-Rapidez
+
+Entrega rápida
+
 </h3>
 
+
 <p>
-Atención rápida y personalizada.
+
+Atención fácil y personalizada.
+
 </p>
 
+
 </div>
+
+
 
 
 
 <div class="tarjeta">
 
+
+<div class="icono">
+
 ⭐
 
+</div>
+
+
 <h3>
+
 Confianza
+
 </h3>
 
+
 <p>
-Clientes satisfechos.
+
+Miles de espacios más limpios.
+
 </p>
 
+
 </div>
+
 
 
 </div>
@@ -234,42 +296,73 @@ Clientes satisfechos.
 
 
 
-<section id="productos" class="productos">
+
+
+<!-- PRODUCTOS -->
+
+
+<section class="productos" id="productos">
 
 
 <h2>
-🧺 Nuestros Productos
+
+🧺 Productos Pedro Clean
+
 </h2>
+
+
 
 
 <div class="categorias">
 
-<button>
+
+<button class="categoria activo" data-cat="todos">
+
 🧴 Todos
+
 </button>
 
-<button>
+
+<button class="categoria" data-cat="pisos">
+
 🪣 Pisos
+
 </button>
 
-<button>
+
+<button class="categoria" data-cat="ropa">
+
 👕 Ropa
+
 </button>
 
-<button>
+
+<button class="categoria" data-cat="cocina">
+
 🍽 Cocina
+
 </button>
 
-<button>
+
+<button class="categoria" data-cat="manos">
+
 🧼 Manos
+
 </button>
 
-<button>
+
+<button class="categoria" data-cat="bolsas">
+
 🗑 Bolsas
+
 </button>
+
 
 
 </div>
+
+
+
 
 
 
@@ -278,24 +371,31 @@ Clientes satisfechos.
 
 
 
-<div class="producto">
+
+<div class="producto" data-tipo="cocina">
 
 
 <img src="imagenes/detergente.png">
 
 
 <h3>
-Detergente 12% Amarillo
+
+Detergente concentrado 12%
+
 </h3>
 
 
 <p>
-Limpieza profunda para cocina.
+
+Ideal para cocina y vajilla.
+
 </p>
 
 
-<a class="whatsapp">
-Consultar
+<a class="consultar">
+
+💬 Consultar
+
 </a>
 
 
@@ -305,24 +405,30 @@ Consultar
 
 
 
-<div class="producto">
+<div class="producto" data-tipo="ropa">
 
 
 <img src="imagenes/jabon-ropa.png">
 
 
 <h3>
-Jabón líquido para ropa 15%
+
+Jabón líquido para ropa
+
 </h3>
 
 
 <p>
-Baja espuma y gran rendimiento.
+
+Limpieza profunda con baja espuma.
+
 </p>
 
 
-<a class="whatsapp">
-Consultar
+<a class="consultar">
+
+💬 Consultar
+
 </a>
 
 
@@ -332,24 +438,60 @@ Consultar
 
 
 
-<div class="producto">
+<div class="producto" data-tipo="ropa">
 
 
 <img src="imagenes/suavizante.png">
 
 
 <h3>
-Suavizante Triple Perfume
+
+Suavizante triple perfume
+
 </h3>
 
 
 <p>
-Aroma fresco y duradero.
+
+Fragancia fresca y duradera.
+
 </p>
 
 
-<a class="whatsapp">
-Consultar
+<a class="consultar">
+
+💬 Consultar
+
+</a>
+
+
+</div><!-- PRODUCTOS CONTINUACIÓN -->
+
+
+<div class="producto" data-tipo="pisos">
+
+
+<img src="imagenes/desinfectante.png">
+
+
+<h3>
+
+Desinfectante de pisos
+
+</h3>
+
+
+<p>
+
+Limpieza y perfume para todos los ambientes.
+
+</p>
+
+
+<a class="consultar">
+
+💬 Consultar
+
 </a>
 
 
@@ -358,24 +500,32 @@ Consultar
 
 
 
-<div class="producto">
+
+
+<div class="producto" data-tipo="cocina">
 
 
 <img src="imagenes/desengrasante.png">
 
 
 <h3>
-Desengrasante Multiuso
+
+Desengrasante multiuso
+
 </h3>
 
 
 <p>
-Elimina suciedad difícil y grasa.
+
+Elimina grasa y suciedad difícil.
+
 </p>
 
 
-<a class="whatsapp">
-Consultar
+<a class="consultar">
+
+💬 Consultar
+
 </a>
 
 
@@ -386,24 +536,31 @@ Consultar
 
 
 
-<div class="producto">
+
+<div class="producto" data-tipo="manos">
 
 
 <img src="imagenes/jabon-manos.png">
 
 
 <h3>
+
 Jabón líquido para manos
+
 </h3>
 
 
 <p>
+
 Limpieza y cuidado diario.
+
 </p>
 
 
-<a class="whatsapp">
-Consultar
+<a class="consultar">
+
+💬 Consultar
+
 </a>
 
 
@@ -414,24 +571,31 @@ Consultar
 
 
 
-<div class="producto">
+
+<div class="producto" data-tipo="bolsas">
 
 
 <img src="imagenes/bolsas.png">
 
 
 <h3>
+
 Bolsas de residuos
+
 </h3>
 
 
 <p>
-Resistentes y prácticas.
+
+Resistentes para uso diario.
+
 </p>
 
 
-<a class="whatsapp">
-Consultar
+<a class="consultar">
+
+💬 Consultar
+
 </a>
 
 
@@ -440,7 +604,91 @@ Consultar
 
 
 
+
 </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- OPINIONES DE CLIENTES -->
+
+
+<section class="opiniones" id="opiniones">
+
+
+<h2>
+
+⭐ Dejanos tu opinión
+
+</h2>
+
+
+
+<div class="form-opinion">
+
+
+
+<h3>
+
+¿Cómo fue tu experiencia?
+
+</h3>
+
+
+
+
+<div class="estrellas">
+
+<span data-star="1">☆</span>
+
+<span data-star="2">☆</span>
+
+<span data-star="3">☆</span>
+
+<span data-star="4">☆</span>
+
+<span data-star="5">☆</span>
+
+
+</div>
+
+
+
+
+
+<textarea id="comentario" placeholder="Escribí tu comentario obligatorio..."></textarea>
+
+
+
+
+
+<button id="enviar-opinion">
+
+Enviar opinión
+
+</button>
+
+
+
+
+</div>
+
+
+
+
+
+<div id="lista-opiniones">
+
+
+</div>
+
 
 
 </section>
@@ -452,128 +700,115 @@ Consultar
 
 
 
-<!-- OPINIONES -->
+
+<!-- PREGUNTAS FRECUENTES -->
 
 
-<section class="seccion">
+<section class="preguntas">
 
 
 <h2>
-⭐ Opiniones de clientes
+
+🧽 Preguntas frecuentes
+
 </h2>
 
 
 
-<div class="tarjetas">
-
-
-<div class="tarjeta">
-
-⭐️⭐️⭐️⭐️⭐️
-
-<p>
-"Excelente calidad, los productos rinden muchísimo."
-</p>
-
-</div>
-
-
-
-
-<div class="tarjeta">
-
-⭐️⭐️⭐️⭐️⭐️
-
-<p>
-"Buen aroma y muy buena atención."
-</p>
-
-</div>
-
-
-
-
-<div class="tarjeta">
-
-⭐️⭐️⭐️⭐️⭐️
-
-<p>
-"Siempre compro porque son confiables."
-</p>
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- PREGUNTAS -->
-
-
-<section class="seccion">
-
-
-<h2>
-❓ Preguntas frecuentes
-</h2>
-
-
 
 <div class="pregunta">
 
-<h3>
-🧴 ¿Qué productos venden?
-</h3>
 
-<p>
-Productos para pisos, ropa, cocina, manos y bolsas.
-</p>
+<div class="pregunta-icono">
+
+🧴
 
 </div>
+
+
+<h3>
+
+¿Qué productos venden?
+
+</h3>
+
+
+<p>
+
+Vendemos productos para pisos, ropa, cocina, manos y bolsas.
+
+</p>
+
+
+</div>
+
+
+
 
 
 
 
 <div class="pregunta">
 
+
+<div class="pregunta-icono">
+
+🫧
+
+</div>
+
+
 <h3>
-🫧 ¿Son productos concentrados?
+
+¿Los productos son concentrados?
+
 </h3>
 
+
 <p>
-Sí, tienen excelente rendimiento.
+
+Sí, están preparados para ofrecer mayor rendimiento.
+
 </p>
+
 
 </div>
 
 
 
 
+
+
+
 <div class="pregunta">
 
+
+<div class="pregunta-icono">
+
+📲
+
+</div>
+
+
 <h3>
-📱 ¿Cómo puedo comprar?
+
+¿Cómo puedo comprar?
+
 </h3>
 
+
 <p>
+
 Podés consultar directamente por WhatsApp.
+
 </p>
+
 
 </div>
 
 
-
 </section>
+
 
 
 
@@ -590,25 +825,28 @@ Podés consultar directamente por WhatsApp.
 
 <div class="calidad-icono">
 
-🧽🫧
+✨🧽✨
 
 </div>
 
 
 
+
 <h2>
 
-Limpieza de Calidad
+Calidad que se nota en cada limpieza
 
 </h2>
 
 
 
+
 <p>
 
-En Pérez Limpieza trabajamos para ofrecer productos confiables, eficientes y con gran rendimiento para que cada espacio quede impecable.
+En Pedro Clean creamos soluciones para que cada hogar, comercio o empresa tenga una limpieza eficiente, fresca y profesional.
 
 </p>
+
 
 
 
@@ -616,71 +854,122 @@ En Pérez Limpieza trabajamos para ofrecer productos confiables, eficientes y co
 
 
 <div>
-✨
-<br>
-Calidad
-</div>
 
-
-<div>
 🧴
+
 <br>
-Rendimiento
+
+Productos confiables
+
 </div>
+
 
 
 <div>
-🌿
+
+🫧
+
 <br>
-Frescura
+
+Máximo rendimiento
+
 </div>
 
 
+
+<div>
+
+🌿
+
+<br>
+
+Frescura total
+
 </div>
 
 
 
-</section>
+</div>
 
 
 
-
-
-
-
-
-<!-- CONTACTO -->
+</section><!-- CONTACTO FINAL -->
 
 
 <footer id="contacto">
 
 
+<div class="footer-icono">
+
+🫧💚
+
+</div>
+
+
+
 <h2>
-🫧 Pérez Limpieza
+
+Pedro Clean
+
 </h2>
 
 
+<h3>
+
+¿Querés tener tus productos de limpieza?
+
+</h3>
+
 
 <p>
-Productos de limpieza profesionales
+
+Contactanos y recibí atención rápida por WhatsApp.
+
 </p>
 
 
 
-<a 
-href="https://wa.me/5491171005652"
-target="_blank"
-class="boton-footer">
+<div class="whatsapp-contacto">
 
-💬 Consultar por WhatsApp
 
-</a>
+<div class="icono-wsp">
 
+💬
+
+</div>
+
+
+<h3>
+
+WhatsApp
+
+</h3>
 
 
 <p>
 
-© 2026 Pérez Limpieza - Limpieza de calidad
+📱 11 7100 5652
+
+</p>
+
+
+
+<a href="https://wa.me/5491171005652"
+target="_blank">
+
+Consultar ahora
+
+</a>
+
+
+</div>
+
+
+
+
+<p class="copyright">
+
+© 2026 Pedro Clean - Limpieza de calidad
 
 </p>
 
@@ -693,10 +982,13 @@ class="boton-footer">
 
 
 
-<a 
+
+<!-- BOTÓN FLOTANTE -->
+
+
+<a class="whatsapp-flotante"
 href="https://wa.me/5491171005652"
-target="_blank"
-class="whatsapp-flotante">
+target="_blank">
 
 💬
 
