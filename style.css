@@ -92,7 +92,7 @@ nav a:hover{
     width:500px;
     height:500px;
 
-    background:url("imagenes/logo.png") center no-repeat;
+    background:url("imagenes/fondo.jpg");
 
     background-size:contain;
 
